@@ -1,0 +1,51 @@
+﻿task,label,arm,calls,energy_wh,duration_s,energy_assembly_wh,tokens_out,correct,answer
+B1,Invoice triage,monolithic,1,0.012887791484190224,41.0712947845459,0.0,65,1,"Voici les informations extraites sous forme de JSON :
+
+```json
+{
+  ""date"": ""12/03/2025"",
+  ""montant"": ""1 250,00 € TTC"",
+  ""categorie_comptable"": ""abonnement logiciel""
+}
+```"
+B1,Invoice triage,decomposed,4,0.03104824693125343,98.01925277709961,0.011007632241128027,52,1,"```json
+{
+  ""date"": ""12/03/2025"",
+  ""montant"": ""1 250,00 € TTC"",
+  ""description"": ""Frais de licence/logiciel""
+}
+```"
+B2,Ticket routing,monolithic,1,0.009600374304199792,30.50164556503296,0.0,38,0,"```json
+{
+  ""categorie"": ""Problème de connexion"",
+  ""urgente"": ""haute"",
+  ""equipe"": ""équipe de support réseau""
+}
+```"
+B2,Ticket routing,decomposed,4,0.05936275291065884,227.24985647201538,0.0307804870631828,200,1,"```json
+{
+  ""category"": ""Technique"",
+  ""reasons"": [
+    ""Le problème concerne une fonctionnalité technique (la connexion)."",
+    ""Il y a une relation avec une mise à jour, ce qui implique probablement un problème logiciel ou de configuration."",
+    ""Il mentionne des utilisateurs bloqués, ce qui est "
+B3,Contact normalisation,monolithic,1,0.01424659044326834,45.60918307304382,0.0,91,0,"Voici le contact normalisé en JSON avec les clés nom, téléphone et email :
+
+```json
+{
+  ""nom"": ""Dupont Jean"",
+  ""telephone"": ""06 12 34 56 78"",
+  ""email"": ""Jean.DUPONT@exemple.FR""
+}
+```
+
+Cette structure JSON représente correctement les informations fournies, avec les clés appropriées et les valeurs c"
+B3,Contact normalisation,decomposed,4,0.05405761597010407,172.46523666381836,0.022757210521734225,137,1,"```json
+{
+  ""nom_formate"": ""Dupont Jean"",
+  ""informations_separees"": {
+    ""telephone"": ""06 12 34 56 78"",
+    ""email"": ""Jean.DUPONT@exemple.FR""
+  },
+  ""numéro_formaté_international"": ""dupont jean / +33 6 12 34 56 78 / Jean.DUPONT@exemple.FR"",
+  ""email_minuscules"": "".dupont jean / 06 12 34 56 78 / je"

@@ -1,0 +1,841 @@
+﻿judge,model,prompt_id,tier,answer_hash,score,comment,how_read,judge_energy_wh,raw_answer
+llama3.1:8b,qwen2.5:7b,T3_01_calcul,T3,db8c0765cd46,4.8,"La réponse est très précise et complète, et suit une structure logique. Cependant, la réponse de référence est légèrement différente, ce qui pourrait indiquer une petite erreur dans les calculs.","JSON, 5 of 5 criteria",0.03484099426846813,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est très précise et complète, et suit une structure logique. Cependant, la réponse de référence est légèrement différente, ce qui pourrait indiquer une petite erreur dans les calculs.""
+}"
+qwen2.5:7b,qwen2.5:7b,T3_01_calcul,T3,db8c0765cd46,3.6,"La réponse est claire et structurée, mais elle contient une erreur dans le calcul final. La réponse de référence est plus précise et alignée avec les données fournies.","JSON, 5 of 5 criteria",0.02681897704797368,"```json
+{
+  ""exactitude"": 3,
+  ""clarté"": 4,
+  ""structure"": 4,
+  ""completude"": 4,
+  ""utilite"": 3,
+  ""commentaire"": ""La réponse est claire et structurée, mais elle contient une erreur dans le calcul final. La réponse de référence est plus précise et alignée avec les données fournies.""
+}
+```"
+llama3.1:8b,qwen2.5:1.5b,T2_02_email,T2,e629b15a5f59,4.4,"La réponse est globalement précise et claire, mais manque un peu de structure et de complétude. La proposition de point d'étape et la solution intermédiaire sont utiles pour le client.","JSON, 5 of 5 criteria",0.02529086334862544,"Voici la réponse en JSON avec les critères évalués :
+
+```
+{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 4,
+  ""complétude"": 4,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est globalement précise et claire, mais manque un peu de structure et de complétude. La proposition de point d'étape et la solution intermédiaire sont utiles pour le client.""
+}
+```"
+qwen2.5:7b,qwen2.5:1.5b,T2_02_email,T2,e629b15a5f59,4.0,"La réponse est globalement bien structurée et claire, avec une bonne utilité métier. Cependant, elle pourrait être légèrement améliorée pour une meilleure exactitude et clarté, en précisant par exemple la nature des problèmes de qualité des données.","JSON, 5 of 5 criteria",0.022484212314784726,"{
+  ""exactitude"": 4,
+  ""clarté"": 4,
+  ""structure"": 4,
+  ""completude"": 4,
+  ""utilite"": 4,
+  ""commentaire"": ""La réponse est globalement bien structurée et claire, avec une bonne utilité métier. Cependant, elle pourrait être légèrement améliorée pour une meilleure exactitude et clarté, en précisant par exemple la nature des problèmes de qualité des données.""
+}"
+llama3.1:8b,qwen2.5:1.5b,T3_01_calcul,T3,4ea5a4b152ff,0.0,"La réponse est incorrecte car elle ne correspond pas aux calculs effectués. La consommation annuelle totale en MWh est de 2,2176 MWh, et non 0,01008 MWh.","JSON, 5 of 5 criteria",0.021165194803662614,"{
+  ""exactitude"": 0,
+  ""clarté"": 0,
+  ""structure"": 0,
+  ""complétude"": 0,
+  ""utilité"": 0,
+  ""commentaire"": ""La réponse est incorrecte car elle ne correspond pas aux calculs effectués. La consommation annuelle totale en MWh est de 2,2176 MWh, et non 0,01008 MWh.""
+}"
+qwen2.5:7b,qwen2.5:1.5b,T3_01_calcul,T3,4ea5a4b152ff,2.4,"La réponse est claire et structurée, mais elle contient des erreurs de calcul et de compréhension. Elle ne répond pas complètement à la question initiale et manque de précision dans la conversion des unités.","JSON, 5 of 5 criteria",0.019842999616658228,"{
+  ""exactitude"": 2,
+  ""clarté"": 3,
+  ""structure"": 2,
+  ""completude"": 2,
+  ""utilite"": 3,
+  ""commentaire"": ""La réponse est claire et structurée, mais elle contient des erreurs de calcul et de compréhension. Elle ne répond pas complètement à la question initiale et manque de précision dans la conversion des unités.""
+}"
+llama3.1:8b,qwen2.5:3b,T1_03_classification,T1,9233a9af8029,4.2,"La réponse est exacte et claire, elle suit une structure logique et est complète, elle est également utile pour le métier","JSON, 5 of 5 criteria",0.010162074169032524,"{
+  ""exactitude"": 1,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est exacte et claire, elle suit une structure logique et est complète, elle est également utile pour le métier""
+}"
+qwen2.5:7b,qwen2.5:3b,T1_03_classification,T1,9233a9af8029,5.0,"La réponse est concise et précise, correspondant parfaitement à la catégorie de réponse de référence 'Technique'. Elle est claire, structurée et complète sans superflu.","JSON, 5 of 5 criteria",0.010628545217843576,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est concise et précise, correspondant parfaitement à la catégorie de réponse de référence 'Technique'. Elle est claire, structurée et complète sans superflu.""
+}"
+llama3.1:8b,qwen2.5:1.5b,T1_02_extraction,T1,20b056de577b,5.0,"La réponse est exacte, claire, bien structurée, complète et utile pour le métier.","JSON, 5 of 5 criteria",0.017092866576094344,"Voici la réponse avec les notes de 1 à 5 sur les cinq critères :
+
+```json
+{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est exacte, claire, bien structurée, complète et utile pour le métier.""
+}
+```"
+qwen2.5:7b,qwen2.5:1.5b,T1_02_extraction,T1,20b056de577b,5.0,"La réponse est parfaitement exacte, claire, structurée et complète. Elle correspond parfaitement à la réponse de référence sans aucune omission ou inexactitude.","JSON, 5 of 5 criteria",0.01476506025135341,"```json
+{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est parfaitement exacte, claire, structurée et complète. Elle correspond parfaitement à la réponse de référence sans aucune omission ou inexactitude.""
+}
+```"
+llama3.1:8b,qwen2.5:1.5b,T3_03_code,T3,7bf2c5cd4bd3,4.2,"La fonction modèle_le_plus_efficient calcule et retourne le nom du modèle ayant le plus faible ratio énergie par token. La fonction est claire, bien structurée et complète. Elle répond à la question posée et est utile pour les besoins métier.","JSON, 5 of 5 criteria",0.019038306833375252,"```json
+{
+  ""exactitude"": 1,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La fonction modèle_le_plus_efficient calcule et retourne le nom du modèle ayant le plus faible ratio énergie par token. La fonction est claire, bien structurée et complète. Elle répond à la question posée et est utile pour les besoins métier.""
+}
+```"
+qwen2.5:7b,qwen2.5:1.5b,T3_03_code,T3,7bf2c5cd4bd3,5.0,"La réponse est précise, claire, bien structurée, complète et très utile pour comprendre et implémenter le code demandé.","JSON, 5 of 5 criteria",0.01733537843081461,"```json
+{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est précise, claire, bien structurée, complète et très utile pour comprendre et implémenter le code demandé.""
+}
+```"
+llama3.1:8b,qwen2.5:1.5b,T1_03_classification,T1,33d37f8b8823,0.0,"La réponse est incorrecte, la bonne réponse est 'Technique' et non 'Réclamation'","JSON, 5 of 5 criteria",0.010558448149834624,"{
+  ""exactitude"": 0,
+  ""clarté"": 0,
+  ""structure"": 0,
+  ""complétude"": 0,
+  ""utilité"": 0,
+  ""commentaire"": ""La réponse est incorrecte, la bonne réponse est 'Technique' et non 'Réclamation'""
+}"
+qwen2.5:7b,qwen2.5:1.5b,T1_03_classification,T1,33d37f8b8823,1.4,"La réponse 'Réclamation' est vague et ne fournit aucune information pertinente sur la classification T1_03. Elle manque de clarté, de structure et de complétude. Elle n'a pas d'utilité métier significative dans ce contexte.","JSON, 5 of 5 criteria",0.01068914182302594,"```json
+{
+  ""exactitude"": 2,
+  ""clarté"": 2,
+  ""structure"": 1,
+  ""completude"": 1,
+  ""utilite"": 1,
+  ""commentaire"": ""La réponse 'Réclamation' est vague et ne fournit aucune information pertinente sur la classification T1_03. Elle manque de clarté, de structure et de complétude. Elle n'a pas d'utilité métier significative dans ce contexte.""
+}
+```"
+llama3.1:8b,qwen2.5:0.5b,T3_03_code,T3,13db2079a9c5,5.0,Le code est très clair et bien structuré. Il vérifie les entrées avant de calculer le ratio énergie par token et retourne le nom du modèle le plus efficace. La fonction est facile à utiliser et comprend un exemple d'utilisation.,"JSON, 5 of 5 criteria",0.029409941426993998,"```json
+{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""Le code est très clair et bien structuré. Il vérifie les entrées avant de calculer le ratio énergie par token et retourne le nom du modèle le plus efficace. La fonction est facile à utiliser et comprend un exemple d'utilisation.""
+}
+```"
+qwen2.5:7b,qwen2.5:0.5b,T3_03_code,T3,13db2079a9c5,5.0,"La réponse est très précise et couvre tous les aspects requis. Elle fournit une implémentation détaillée en Python, explique clairement la logique et fournit un exemple d'utilisation. Elle correspond parfaitement à la référence fournie.","JSON, 5 of 5 criteria",0.02640313918140006,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est très précise et couvre tous les aspects requis. Elle fournit une implémentation détaillée en Python, explique clairement la logique et fournit un exemple d'utilisation. Elle correspond parfaitement à la référence fournie.""
+}"
+llama3.1:8b,qwen2.5:3b,T1_01_factuel,T1,693d41c402ef,4.2,"La réponse est directe et précise, sans ambiguïté ni omission.","JSON, 5 of 5 criteria",0.008714262364445289,"{
+  ""exactitude"": 1,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est directe et précise, sans ambiguïté ni omission.""
+}"
+qwen2.5:7b,qwen2.5:3b,T1_01_factuel,T1,693d41c402ef,4.4,"La réponse est correcte et claire, mais pourrait être un peu plus structurée. Elle pourrait inclure une indication sur le fait que Canberra est la capitale de l'Australie.","JSON, 5 of 5 criteria",0.010544775162999358,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 4,
+  ""completude"": 4,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est correcte et claire, mais pourrait être un peu plus structurée. Elle pourrait inclure une indication sur le fait que Canberra est la capitale de l'Australie.""
+}"
+llama3.1:8b,qwen2.5:3b,T3_01_calcul,T3,190c8e91b1bf,5.0,"La réponse est très détaillée et précise, elle répond parfaitement à la question posée.","JSON, 5 of 5 criteria",0.02395024305208063,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est très détaillée et précise, elle répond parfaitement à la question posée.""
+}"
+qwen2.5:7b,qwen2.5:3b,T3_01_calcul,T3,190c8e91b1bf,5.0,"La réponse est claire, structurée, complète et exacte. Elle fournit une explication détaillée des calculs nécessaires pour déterminer la consommation électrique annuelle, ce qui en fait une réponse très utile pour un public métier.","JSON, 5 of 5 criteria",0.02811102270812478,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est claire, structurée, complète et exacte. Elle fournit une explication détaillée des calculs nécessaires pour déterminer la consommation électrique annuelle, ce qui en fait une réponse très utile pour un public métier.""
+}"
+llama3.1:8b,qwen2.5:7b,T2_01_synthese,T2,270a5d2eaa39,5.0,"La réponse est très proche de la réponse de référence, avec les mêmes points clés et les mêmes informations. La seule différence est la formulation des phrases, mais le contenu est identique.","JSON, 5 of 5 criteria",0.021277243538821128,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est très proche de la réponse de référence, avec les mêmes points clés et les mêmes informations. La seule différence est la formulation des phrases, mais le contenu est identique.""
+}"
+qwen2.5:7b,qwen2.5:7b,T2_01_synthese,T2,270a5d2eaa39,4.8,"La réponse est claire, structurée et complète. Elle capture tous les aspects importants de la synthèse, y compris les détails sur l'adoption, les bénéfices et les risques, ainsi que la décision stratégique. Toutefois, elle pourrait être légèrement plus précise sur les KPI environnementaux mentionnés dans la réponse de référence.","JSON, 5 of 5 criteria",0.026645052819611468,"```json
+{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est claire, structurée et complète. Elle capture tous les aspects importants de la synthèse, y compris les détails sur l'adoption, les bénéfices et les risques, ainsi que la décision stratégique. Toutefois, elle pourrait être légèrement plus précise sur les KPI environnementaux mentionnés dans la réponse de référence.""
+}
+```"
+llama3.1:8b,qwen2.5:3b,T3_03_code,T3,c933ca507656,5.0,La fonction est très claire et bien structurée. Elle répond parfaitement à la question posée.,"JSON, 5 of 5 criteria",0.012087454347872818,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La fonction est très claire et bien structurée. Elle répond parfaitement à la question posée.""
+}"
+qwen2.5:7b,qwen2.5:3b,T3_03_code,T3,c933ca507656,5.0,"La réponse est précise, claire, bien structurée, complète et très utile pour comprendre et implémenter le code demandé.","JSON, 5 of 5 criteria",0.013806995107273836,"```json
+{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est précise, claire, bien structurée, complète et très utile pour comprendre et implémenter le code demandé.""
+}
+```"
+llama3.1:8b,qwen2.5:0.5b,T2_03_dissertation,T2,cec1c025b801,4.0,"La réponse est claire et bien structurée, mais elle manque un peu de complétude en termes de nuances et de contre-exemples. Cependant, elle présente les avantages et les inconvénients de l'open source de manière équilibrée et nuancée.","JSON, 5 of 5 criteria",0.04269444599013129,"```
+{
+  ""exactitude"": 4,
+  ""clarté"": 4,
+  ""structure"": 4,
+  ""complétude"": 4,
+  ""utilité"": 4,
+  ""commentaire"": ""La réponse est claire et bien structurée, mais elle manque un peu de complétude en termes de nuances et de contre-exemples. Cependant, elle présente les avantages et les inconvénients de l'open source de manière équilibrée et nuancée.""
+}
+```"
+qwen2.5:7b,qwen2.5:0.5b,T2_03_dissertation,T2,cec1c025b801,2.8,"La réponse est claire et contient des informations pertinentes, mais elle manque de structure et de nuance. Les inconvénients sont répétitifs et ne correspondent pas exactement aux points mentionnés dans la réponse de référence. De plus, la conclusion est trop générale et ne nuance pas suffisamment les avantages et inconvénients.","JSON, 5 of 5 criteria",0.036901110774005645,"{
+  ""exactitude"": 3,
+  ""clarté"": 3,
+  ""structure"": 2,
+  ""completude"": 3,
+  ""utilite"": 3,
+  ""commentaire"": ""La réponse est claire et contient des informations pertinentes, mais elle manque de structure et de nuance. Les inconvénients sont répétitifs et ne correspondent pas exactement aux points mentionnés dans la réponse de référence. De plus, la conclusion est trop générale et ne nuance pas suffisamment les avantages et inconvénients.""
+}"
+llama3.1:8b,qwen2.5:7b,T2_03_dissertation,T2,16655808db06,5.0,"La réponse est complète, claire et structurée, et elle présente une vision nuancée des avantages et des inconvénients de l'open source dans le domaine de l'intelligence artificielle.","JSON, 5 of 5 criteria",0.02754261952012405,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est complète, claire et structurée, et elle présente une vision nuancée des avantages et des inconvénients de l'open source dans le domaine de l'intelligence artificielle.""
+}"
+qwen2.5:7b,qwen2.5:7b,T2_03_dissertation,T2,16655808db06,4.8,"La réponse est claire, structurée et complète. Elle couvre tous les aspects requis et est utile pour les décideurs métier en matière de développement de l'IA.","JSON, 5 of 5 criteria",0.023153478137412174,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est claire, structurée et complète. Elle couvre tous les aspects requis et est utile pour les décideurs métier en matière de développement de l'IA.""
+}"
+llama3.1:8b,qwen2.5:3b,T1_04_traduction,T1,996c05ec7d01,0.8800000000000001,"La réponse est presque exacte, mais manque un peu de clarté. La structure est bonne, mais la complétude et l'utilité sont un peu inférieures à ce qu'elles pourraient être.","JSON, 5 of 5 criteria",0.014868918808799649,"{
+  ""exactitude"": 0.8,
+  ""clarté"": 0.9,
+  ""structure"": 1,
+  ""complétude"": 0.9,
+  ""utilité"": 0.8,
+  ""commentaire"": ""La réponse est presque exacte, mais manque un peu de clarté. La structure est bonne, mais la complétude et l'utilité sont un peu inférieures à ce qu'elles pourraient être.""
+}"
+qwen2.5:7b,qwen2.5:3b,T1_04_traduction,T1,996c05ec7d01,4.8,"La traduction est correcte et concise, elle transmet clairement le sens de la phrase originale sans ajouter ou supprimer d'informations. La structure de la phrase est bien conçue et elle est utile pour un contexte professionnel.","JSON, 5 of 5 criteria",0.013804683607581615,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La traduction est correcte et concise, elle transmet clairement le sens de la phrase originale sans ajouter ou supprimer d'informations. La structure de la phrase est bien conçue et elle est utile pour un contexte professionnel.""
+}"
+llama3.1:8b,qwen2.5:1.5b,T3_02_logique,T3,8d19bb0c88fb,5.0,"La réponse est claire et précise, elle suit une logique logique et élimine les possibilités incorrectes.","JSON, 5 of 5 criteria",0.01657218188881648,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est claire et précise, elle suit une logique logique et élimine les possibilités incorrectes.""
+}"
+qwen2.5:7b,qwen2.5:1.5b,T3_02_logique,T3,8d19bb0c88fb,4.0,"La réponse est claire et structurée, elle suit les informations données et arrive à la bonne conclusion. Cependant, elle pourrait être légèrement plus détaillée pour une meilleure compréhension.","JSON, 5 of 5 criteria",0.0178017916660368,"```json
+{
+  ""exactitude"": 4,
+  ""clarté"": 4,
+  ""structure"": 4,
+  ""completude"": 4,
+  ""utilite"": 4,
+  ""commentaire"": ""La réponse est claire et structurée, elle suit les informations données et arrive à la bonne conclusion. Cependant, elle pourrait être légèrement plus détaillée pour une meilleure compréhension.""
+}
+```"
+llama3.1:8b,qwen2.5:7b,T2_02_email,T2,2d54007d91a0,5.0,"La réponse de réponse est très proche de la réponse de référence, elle inclut tous les éléments attendus : objet explicite, reconnaissance du retard, cause, nouveau délai, solution intermédiaire, proposition de point d'étape et ton professionnel. La structure est également bien organisée et facile à suivre.","JSON, 5 of 5 criteria",0.024549399338007934,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse de réponse est très proche de la réponse de référence, elle inclut tous les éléments attendus : objet explicite, reconnaissance du retard, cause, nouveau délai, solution intermédiaire, proposition de point d'étape et ton professionnel. La structure est également bien organisée et facile à suivre.""
+}"
+qwen2.5:7b,qwen2.5:7b,T2_02_email,T2,2d54007d91a0,4.8,"La réponse est très claire et structurée, couvrant tous les aspects nécessaires. Elle est également professionnelle et utile pour le destinataire.","JSON, 5 of 5 criteria",0.022728586345340224,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est très claire et structurée, couvrant tous les aspects nécessaires. Elle est également professionnelle et utile pour le destinataire.""
+}"
+llama3.1:8b,qwen2.5:1.5b,T1_01_factuel,T1,693d41c402ef,4.2,"La réponse est très claire et précise, et elle répond directement à la question posée.","JSON, 5 of 5 criteria",0.010049625642221977,"{
+  ""exactitude"": 1,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est très claire et précise, et elle répond directement à la question posée.""
+}"
+qwen2.5:7b,qwen2.5:1.5b,T1_01_factuel,T1,693d41c402ef,4.4,"La réponse est correcte et claire, mais pourrait être un peu plus structurée. Elle pourrait inclure une indication sur le fait que Canberra est la capitale de l'Australie.","JSON, 5 of 5 criteria",0.011356340289122403,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 4,
+  ""completude"": 4,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est correcte et claire, mais pourrait être un peu plus structurée. Elle pourrait inclure une indication sur le fait que Canberra est la capitale de l'Australie.""
+}"
+llama3.1:8b,qwen2.5:0.5b,T1_02_extraction,T1,997664ec42e7,4.2,"La réponse est exacte, claire, bien structurée, complète et utile pour le métier.","JSON, 5 of 5 criteria",0.013503218787031044,"{
+  ""exactitude"": 1,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est exacte, claire, bien structurée, complète et utile pour le métier.""
+}"
+qwen2.5:7b,qwen2.5:0.5b,T1_02_extraction,T1,997664ec42e7,4.8,"La réponse est claire, structurée, complète et utile. La seule note moindre est due à l'absence de 'TTC' après le montant, ce qui pourrait être considéré comme un détail technique.","JSON, 5 of 5 criteria",0.017043985095332136,"```json
+{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est claire, structurée, complète et utile. La seule note moindre est due à l'absence de 'TTC' après le montant, ce qui pourrait être considéré comme un détail technique.""
+}
+```"
+llama3.1:8b,qwen2.5:3b,T3_04_architecture,T3,df38785d9a11,4.6,"La réponse propose une architecture de routage de modèles pour un assistant interne d'une grande banque, avec des modèles de taille petite, moyenne et grande, ainsi que des critères d'escalade et de gestion de la latence. Les indicateurs de suivi environnemental sont également proposés. La réponse est claire et bien structurée, mais pourrait être plus complète en fournissant des exemples concrets de modèles et de critères d'escalade.","JSON, 5 of 5 criteria",0.04822594668433476,"```
+{
+  ""exactitude"": 4,
+  ""clarté"": 4,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse propose une architecture de routage de modèles pour un assistant interne d'une grande banque, avec des modèles de taille petite, moyenne et grande, ainsi que des critères d'escalade et de gestion de la latence. Les indicateurs de suivi environnemental sont également proposés. La réponse est claire et bien structurée, mais pourrait être plus complète en fournissant des exemples concrets de modèles et de critères d'escalade.""
+}
+```"
+qwen2.5:7b,qwen2.5:3b,T3_04_architecture,T3,df38785d9a11,3.0,"La réponse fournie est pertinente et aborde les aspects clés de l'architecture de routage de modèles. Cependant, elle comporte des redondances et des erreurs dans la description des critères d'escalade, ce qui affecte sa clarté et sa structure. Les indicateurs de suivi environnemental sont également redondants. La réponse manque de précision dans la description des critères d'escalade et des indicateurs de suivi environnemental.","JSON, 5 of 5 criteria",0.04142575529924915,"{
+  ""exactitude"": 3,
+  ""clarté"": 3,
+  ""structure"": 3,
+  ""completude"": 3,
+  ""utilite"": 3,
+  ""commentaire"": ""La réponse fournie est pertinente et aborde les aspects clés de l'architecture de routage de modèles. Cependant, elle comporte des redondances et des erreurs dans la description des critères d'escalade, ce qui affecte sa clarté et sa structure. Les indicateurs de suivi environnemental sont également redondants. La réponse manque de précision dans la description des critères d'escalade et des indicateurs de suivi environnemental.""
+}"
+llama3.1:8b,qwen2.5:0.5b,T2_04_comparaison,T2,7da8a66a8a55,3.2,"La réponse est incomplète car elle ne prend en compte que 4 critères et ne fournit pas de recommandation argumentée. Cependant, elle est claire et bien structurée.","JSON, 5 of 5 criteria",0.02126306961022607,"{
+  ""exactitude"": 2,
+  ""clarté"": 4,
+  ""structure"": 5,
+  ""complétude"": 3,
+  ""utilité"": 2,
+  ""commentaire"": ""La réponse est incomplète car elle ne prend en compte que 4 critères et ne fournit pas de recommandation argumentée. Cependant, elle est claire et bien structurée.""
+}"
+qwen2.5:7b,qwen2.5:0.5b,T2_04_comparaison,T2,7da8a66a8a55,2.4,"La réponse manque de précision et de complétude. Les critères ne correspondent pas exactement à ceux mentionnés dans la réponse de référence. De plus, la structure et la clarté pourraient être améliorées pour une meilleure compréhension.","JSON, 5 of 5 criteria",0.025809582312398282,"```json
+{
+  ""exactitude"": 2,
+  ""clarté"": 3,
+  ""structure"": 3,
+  ""completude"": 2,
+  ""utilite"": 2,
+  ""commentaire"": ""La réponse manque de précision et de complétude. Les critères ne correspondent pas exactement à ceux mentionnés dans la réponse de référence. De plus, la structure et la clarté pourraient être améliorées pour une meilleure compréhension.""
+}
+```"
+llama3.1:8b,qwen2.5:0.5b,T1_04_traduction,T1,169628b95827,0.0,La réponse est incomplète et contient une erreur de date (mardi prochain au lieu de jeudi prochain),"JSON, 5 of 5 criteria",0.011285973128652012,"{
+  ""exactitude"": 0,
+  ""clarté"": 0,
+  ""structure"": 0,
+  ""complétude"": 0,
+  ""utilité"": 0,
+  ""commentaire"": ""La réponse est incomplète et contient une erreur de date (mardi prochain au lieu de jeudi prochain)""
+}"
+qwen2.5:7b,qwen2.5:0.5b,T1_04_traduction,T1,169628b95827,3.2,"La traduction est correcte mais pourrait être plus précise. La structure de la phrase est simple et directe, ce qui peut être un avantage en termes de compréhension rapide. Cependant, elle manque de formalité et de clarté dans le choix des mots par rapport à la version originale.","JSON, 5 of 5 criteria",0.014591147869089405,"{
+  ""exactitude"": 3,
+  ""clarté"": 4,
+  ""structure"": 2,
+  ""completude"": 3,
+  ""utilite"": 4,
+  ""commentaire"": ""La traduction est correcte mais pourrait être plus précise. La structure de la phrase est simple et directe, ce qui peut être un avantage en termes de compréhension rapide. Cependant, elle manque de formalité et de clarté dans le choix des mots par rapport à la version originale.""
+}"
+llama3.1:8b,qwen2.5:3b,T3_02_logique,T3,8f4adaa2ffee,5.0,"La réponse est claire, structurée et complète. Les étapes sont bien définies et les conclusions sont logiques. La personne qui travaille sur l'IT est bien identifiée comme Chloé.","JSON, 5 of 5 criteria",0.026015083723057233,"Voici la réponse en JSON avec les critères évalués :
+
+```
+{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est claire, structurée et complète. Les étapes sont bien définies et les conclusions sont logiques. La personne qui travaille sur l'IT est bien identifiée comme Chloé.""
+}
+```"
+qwen2.5:7b,qwen2.5:3b,T3_02_logique,T3,8f4adaa2ffee,4.0,"La réponse est claire et structurée, elle suit les étapes logiques nécessaires pour déterminer les projets des consultants. Cependant, elle pourrait être légèrement plus concise pour une meilleure utilité.","JSON, 5 of 5 criteria",0.020410547991866014,"```json
+{
+  ""exactitude"": 4,
+  ""clarté"": 4,
+  ""structure"": 4,
+  ""completude"": 4,
+  ""utilite"": 4,
+  ""commentaire"": ""La réponse est claire et structurée, elle suit les étapes logiques nécessaires pour déterminer les projets des consultants. Cependant, elle pourrait être légèrement plus concise pour une meilleure utilité.""
+}
+```"
+llama3.1:8b,qwen2.5:3b,T2_01_synthese,T2,ea27c6495994,4.6,"La réponse est claire et structurée, mais manque un peu de complétude en termes de détails sur les problèmes et décisions à travailler. Cependant, elle est très utile pour le comité de direction.","JSON, 5 of 5 criteria",0.020667813903293513,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 4,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est claire et structurée, mais manque un peu de complétude en termes de détails sur les problèmes et décisions à travailler. Cependant, elle est très utile pour le comité de direction.""
+}"
+qwen2.5:7b,qwen2.5:3b,T2_01_synthese,T2,ea27c6495994,4.6,"La réponse est claire et structurée, elle capture bien les trois points clés. Cependant, elle ne mentionne pas explicitement les usages spécifiques tels que la synthèse de documents et la recherche d'information interne, ce qui peut être considéré comme une omission par rapport à la réponse de référence.","JSON, 5 of 5 criteria",0.020664666753180527,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 4,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est claire et structurée, elle capture bien les trois points clés. Cependant, elle ne mentionne pas explicitement les usages spécifiques tels que la synthèse de documents et la recherche d'information interne, ce qui peut être considéré comme une omission par rapport à la réponse de référence.""
+}"
+llama3.1:8b,qwen2.5:7b,T3_02_logique,T3,ccf8b392f97f,5.0,"La réponse est claire et précise, et suit une structure logique pour résoudre le problème.","JSON, 5 of 5 criteria",0.016721495920768843,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est claire et précise, et suit une structure logique pour résoudre le problème.""
+}"
+qwen2.5:7b,qwen2.5:7b,T3_02_logique,T3,ccf8b392f97f,3.8,"La réponse est claire et structurée, avec une bonne exactitude des informations. Cependant, elle pourrait être plus utile pour les utilisateurs métier en fournissant une explication plus détaillée sur la logique derrière chaque conclusion.","JSON, 5 of 5 criteria",0.019378677134302174,"```json
+{
+  ""exactitude"": 4,
+  ""clarté"": 4,
+  ""structure"": 4,
+  ""completude"": 4,
+  ""utilite"": 3,
+  ""commentaire"": ""La réponse est claire et structurée, avec une bonne exactitude des informations. Cependant, elle pourrait être plus utile pour les utilisateurs métier en fournissant une explication plus détaillée sur la logique derrière chaque conclusion.""
+}
+```"
+llama3.1:8b,qwen2.5:3b,T2_03_dissertation,T2,e71ab671f2cc,5.0,"La réponse est complète et précise, elle présente clairement les avantages et les inconvénients de l'open source dans l'IA, et propose une conclusion nuancée.","JSON, 5 of 5 criteria",0.030560756929929,"```
+{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est complète et précise, elle présente clairement les avantages et les inconvénients de l'open source dans l'IA, et propose une conclusion nuancée.""
+}
+```"
+qwen2.5:7b,qwen2.5:3b,T2_03_dissertation,T2,e71ab671f2cc,4.8,"La réponse est claire, structurée et complète. Elle couvre tous les aspects requis et est utile pour les décideurs métier en matière de développement de l'IA. La seule note inférieure est due à une petite inexactitude dans la mention de la transparence comme un avantage principal, car elle peut aussi être un inconvénient en termes de confidentialité des données.","JSON, 5 of 5 criteria",0.03222605581343204,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est claire, structurée et complète. Elle couvre tous les aspects requis et est utile pour les décideurs métier en matière de développement de l'IA. La seule note inférieure est due à une petite inexactitude dans la mention de la transparence comme un avantage principal, car elle peut aussi être un inconvénient en termes de confidentialité des données.""
+}"
+llama3.1:8b,qwen2.5:3b,T2_02_email,T2,7fbd34cfc1b2,5.0,"La réponse est très proche de la réponse de référence, elle répond à tous les critères évalués et est très utile pour le client.","JSON, 5 of 5 criteria",0.024905302544522993,"Voici la réponse en JSON avec les critères évalués :
+
+```
+{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est très proche de la réponse de référence, elle répond à tous les critères évalués et est très utile pour le client.""
+}
+```"
+qwen2.5:7b,qwen2.5:3b,T2_02_email,T2,7fbd34cfc1b2,4.8,"La réponse est claire, structurée et complète. Elle respecte les critères de la réponse de référence tout en ajoutant des détails pertinents. La proposition de solution intermédiaire est bien formulée et professionnelle.","JSON, 5 of 5 criteria",0.022543462100380544,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est claire, structurée et complète. Elle respecte les critères de la réponse de référence tout en ajoutant des détails pertinents. La proposition de solution intermédiaire est bien formulée et professionnelle.""
+}"
+llama3.1:8b,qwen2.5:0.5b,T3_01_calcul,T3,5ee27e000f80,0.6,"La réponse est incorrecte car elle ne correspond pas aux calculs détaillés. La consommation totale annuelle en MWh est de 2,2176 MWh, et non 1,033,360,000 requêtes.","JSON, 5 of 5 criteria",0.02410126874871545,"{
+  ""exactitude"": 0,
+  ""clarté"": 2,
+  ""structure"": 1,
+  ""complétude"": 0,
+  ""utilité"": 0,
+  ""commentaire"": ""La réponse est incorrecte car elle ne correspond pas aux calculs détaillés. La consommation totale annuelle en MWh est de 2,2176 MWh, et non 1,033,360,000 requêtes.""
+}"
+qwen2.5:7b,qwen2.5:0.5b,T3_01_calcul,T3,5ee27e000f80,2.4,"La réponse est claire et structurée, mais elle contient des erreurs de calcul et de compréhension. Les étapes de calcul sont détaillées, mais les résultats ne correspondent pas aux données de référence fournies. De plus, la conversion en MWh n'est pas correctement effectuée.","JSON, 5 of 5 criteria",0.027764672329840638,"{
+  ""exactitude"": 2,
+  ""clarté"": 3,
+  ""structure"": 2,
+  ""completude"": 2,
+  ""utilite"": 3,
+  ""commentaire"": ""La réponse est claire et structurée, mais elle contient des erreurs de calcul et de compréhension. Les étapes de calcul sont détaillées, mais les résultats ne correspondent pas aux données de référence fournies. De plus, la conversion en MWh n'est pas correctement effectuée.""
+}"
+llama3.1:8b,qwen2.5:7b,T3_04_architecture,T3,636281ed649b,5.0,"La réponse est très complète et détaillée, elle couvre tous les aspects de l'architecture de routage de modèles, y compris les critères d'escalade, la gestion de la latence et les indicateurs de suivi environnemental. La structure est claire et facile à suivre, avec des titres et des sous-titres qui aident à organiser les informations. La réponse est également très utile pour un architecte IA dans une grande banque qui souhaite mettre en place une architecture de routage de modèles pour un assistant interne.","JSON, 5 of 5 criteria",0.06358879381506594,"```
+{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est très complète et détaillée, elle couvre tous les aspects de l'architecture de routage de modèles, y compris les critères d'escalade, la gestion de la latence et les indicateurs de suivi environnemental. La structure est claire et facile à suivre, avec des titres et des sous-titres qui aident à organiser les informations. La réponse est également très utile pour un architecte IA dans une grande banque qui souhaite mettre en place une architecture de routage de modèles pour un assistant interne.""
+}
+```"
+qwen2.5:7b,qwen2.5:7b,T3_04_architecture,T3,636281ed649b,4.4,"La réponse est claire et structurée, couvrant tous les aspects nécessaires. Elle est pertinente pour un architecte IA dans une grande banque, mais pourrait être légèrement plus précise sur certains points tels que la correspondance entre les critères d'escalade et les KPIs mentionnés dans la référence.","JSON, 5 of 5 criteria",0.052234513301899876,"```json
+{
+  ""exactitude"": 4,
+  ""clarté"": 4,
+  ""structure"": 5,
+  ""completude"": 4,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est claire et structurée, couvrant tous les aspects nécessaires. Elle est pertinente pour un architecte IA dans une grande banque, mais pourrait être légèrement plus précise sur certains points tels que la correspondance entre les critères d'escalade et les KPIs mentionnés dans la référence.""
+}
+```"
+llama3.1:8b,qwen2.5:0.5b,T2_02_email,T2,3f95837bcc95,4.0,"La réponse répond aux critères de référence, mais manque de précision dans la cause du retard et de la solution intermédiaire concrète.","JSON, 5 of 5 criteria",0.02014003284171237,"{
+  ""exactitude"": 4,
+  ""clarté"": 4,
+  ""structure"": 4,
+  ""complétude"": 4,
+  ""utilité"": 4,
+  ""commentaire"": ""La réponse répond aux critères de référence, mais manque de précision dans la cause du retard et de la solution intermédiaire concrète.""
+}"
+qwen2.5:7b,qwen2.5:0.5b,T2_02_email,T2,3f95837bcc95,4.0,"La réponse est globalement bien structurée et claire, elle contient les éléments essentiels de la réponse de référence. Cependant, elle pourrait être légèrement améliorée pour une meilleure exactitude et utilité métier.","JSON, 5 of 5 criteria",0.018585586291991356,"{
+  ""exactitude"": 4,
+  ""clarté"": 4,
+  ""structure"": 4,
+  ""completude"": 4,
+  ""utilite"": 4,
+  ""commentaire"": ""La réponse est globalement bien structurée et claire, elle contient les éléments essentiels de la réponse de référence. Cependant, elle pourrait être légèrement améliorée pour une meilleure exactitude et utilité métier.""
+}"
+llama3.1:8b,qwen2.5:3b,T2_04_comparaison,T2,4b6a3acfa475,5.0,"La réponse est claire, structurée et complète. Elle répond aux besoins de la question et fournit une recommandation argumentée.","JSON, 5 of 5 criteria",0.02293916845429238,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est claire, structurée et complète. Elle répond aux besoins de la question et fournit une recommandation argumentée.""
+}"
+qwen2.5:7b,qwen2.5:3b,T2_04_comparaison,T2,4b6a3acfa475,4.4,"La réponse est claire et structurée, couvrant tous les critères mentionnés. Cependant, elle manque de la précision relative au coût initial et à l'efficacité énergétique. De plus, la recommandation est pertinente mais pourrait être plus détaillée pour des décisions d'affaires spécifiques.","JSON, 5 of 5 criteria",0.027021797926529527,"```json
+{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 4,
+  ""utilite"": 4,
+  ""commentaire"": ""La réponse est claire et structurée, couvrant tous les critères mentionnés. Cependant, elle manque de la précision relative au coût initial et à l'efficacité énergétique. De plus, la recommandation est pertinente mais pourrait être plus détaillée pour des décisions d'affaires spécifiques.""
+}
+```"
+llama3.1:8b,qwen2.5:0.5b,T3_04_architecture,T3,b607d31cf209,0.0,"La réponse est incomplète et contient des répétitions inutiles. Elle ne répond pas clairement aux critères d'escalade, de gestion de la latence et d'indicateurs de suivi environnemental.","JSON, 5 of 5 criteria",0.05576754200944738,"{
+  ""exactitude"": 0,
+  ""clarté"": 0,
+  ""structure"": 0,
+  ""complétude"": 0,
+  ""utilité"": 0,
+  ""commentaire"": ""La réponse est incomplète et contient des répétitions inutiles. Elle ne répond pas clairement aux critères d'escalade, de gestion de la latence et d'indicateurs de suivi environnemental.""
+}"
+qwen2.5:7b,qwen2.5:0.5b,T3_04_architecture,T3,b607d31cf209,2.2,"La réponse fournie contient des répétitions inutiles et des informations non pertinentes. Elle manque de clarté et de structure. Les indicateurs de suivi environnementaux et les critères d'escalade sont mentionnés, mais la structure de l'architecture n'est pas clairement présentée. La réponse de référence est plus précise et pertinente.","JSON, 5 of 5 criteria",0.05346407602182356,"```json
+{
+  ""exactitude"": 3,
+  ""clarté"": 2,
+  ""structure"": 1,
+  ""completude"": 2,
+  ""utilite"": 3,
+  ""commentaire"": ""La réponse fournie contient des répétitions inutiles et des informations non pertinentes. Elle manque de clarté et de structure. Les indicateurs de suivi environnementaux et les critères d'escalade sont mentionnés, mais la structure de l'architecture n'est pas clairement présentée. La réponse de référence est plus précise et pertinente.""
+}
+```"
+llama3.1:8b,qwen2.5:1.5b,T1_04_traduction,T1,ee0f1e1a82ca,4.0,"La traduction est presque exacte, mais il manque le mot 'has been' qui change le sens de la phrase.","JSON, 5 of 5 criteria",0.01105287249468788,"{
+  ""exactitude"": 4,
+  ""clarté"": 4,
+  ""structure"": 4,
+  ""complétude"": 4,
+  ""utilité"": 4,
+  ""commentaire"": ""La traduction est presque exacte, mais il manque le mot 'has been' qui change le sens de la phrase.""
+}"
+qwen2.5:7b,qwen2.5:1.5b,T1_04_traduction,T1,ee0f1e1a82ca,4.6,"La traduction est correcte et claire, mais elle pourrait être plus complète en incluant le verbe 'is' qui est absent dans la réponse de référence.","JSON, 5 of 5 criteria",0.010764134738377978,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 4,
+  ""utilite"": 5,
+  ""commentaire"": ""La traduction est correcte et claire, mais elle pourrait être plus complète en incluant le verbe 'is' qui est absent dans la réponse de référence.""
+}"
+llama3.1:8b,qwen2.5:0.5b,T2_01_synthese,T2,a7bf54d470eb,3.8,"La réponse est globalement précise, mais manque de détails sur les bénéfices et les risques de l'outil. La structure et la clarté sont bonnes, mais la complétude est un peu faible en raison de l'absence de certaines informations.","JSON, 5 of 5 criteria",0.018071424715475792,"{
+  ""exactitude"": 4,
+  ""clarté"": 4,
+  ""structure"": 4,
+  ""complétude"": 3,
+  ""utilité"": 4,
+  ""commentaire"": ""La réponse est globalement précise, mais manque de détails sur les bénéfices et les risques de l'outil. La structure et la clarté sont bonnes, mais la complétude est un peu faible en raison de l'absence de certaines informations.""
+}"
+qwen2.5:7b,qwen2.5:0.5b,T2_01_synthese,T2,a7bf54d470eb,2.6,"La réponse manque de précision et de structure. Elle ne couvre pas tous les points importants de la réponse de référence et ne fournit pas de détails sur les bénéfices et les risques. Cependant, elle contient des informations pertinentes sur l'adoption et la décision.","JSON, 5 of 5 criteria",0.02001605760637843,"{
+  ""exactitude"": 3,
+  ""clarté"": 3,
+  ""structure"": 2,
+  ""completude"": 2,
+  ""utilite"": 3,
+  ""commentaire"": ""La réponse manque de précision et de structure. Elle ne couvre pas tous les points importants de la réponse de référence et ne fournit pas de détails sur les bénéfices et les risques. Cependant, elle contient des informations pertinentes sur l'adoption et la décision.""
+}"
+llama3.1:8b,qwen2.5:1.5b,T2_01_synthese,T2,407d3b267d9e,4.6,"La réponse est claire et structurée, mais manque de détails sur les KPI environnementaux.","JSON, 5 of 5 criteria",0.015671368226389426,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 4,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est claire et structurée, mais manque de détails sur les KPI environnementaux.""
+}"
+qwen2.5:7b,qwen2.5:1.5b,T2_01_synthese,T2,407d3b267d9e,3.8,"La réponse est claire et contient les informations essentielles, mais elle manque de structure et de précision dans certains détails. Par exemple, elle ne mentionne pas explicitement les usages de l'assistant d'IA, ni les KPI environnementaux. De plus, la décision de généralisation n'est pas explicitement mentionnée.","JSON, 5 of 5 criteria",0.019096744318239545,"{
+  ""exactitude"": 4,
+  ""clarté"": 4,
+  ""structure"": 3,
+  ""completude"": 4,
+  ""utilite"": 4,
+  ""commentaire"": ""La réponse est claire et contient les informations essentielles, mais elle manque de structure et de précision dans certains détails. Par exemple, elle ne mentionne pas explicitement les usages de l'assistant d'IA, ni les KPI environnementaux. De plus, la décision de généralisation n'est pas explicitement mentionnée.""
+}"
+llama3.1:8b,qwen2.5:7b,T1_03_classification,T1,9233a9af8029,4.2,"La réponse est exacte et claire, elle suit une structure logique et est complète, elle est également utile pour le métier","JSON, 5 of 5 criteria",0.010674172233874773,"{
+  ""exactitude"": 1,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est exacte et claire, elle suit une structure logique et est complète, elle est également utile pour le métier""
+}"
+qwen2.5:7b,qwen2.5:7b,T1_03_classification,T1,9233a9af8029,5.0,"La réponse est concise et précise, couvrant exactement le critère demandé sans excès d'informations. Elle est claire, structurée et complète, offrant une utilité directe pour les besoins de classification.","JSON, 5 of 5 criteria",0.01205861200842613,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est concise et précise, couvrant exactement le critère demandé sans excès d'informations. Elle est claire, structurée et complète, offrant une utilité directe pour les besoins de classification.""
+}"
+llama3.1:8b,qwen2.5:0.5b,T3_02_logique,T3,4c84360ef573,5.0,"La réponse est claire et précise, et elle répond directement à la question posée.","JSON, 5 of 5 criteria",0.015649955771272987,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est claire et précise, et elle répond directement à la question posée.""
+}"
+qwen2.5:7b,qwen2.5:0.5b,T3_02_logique,T3,4c84360ef573,3.0,"La réponse est claire et structurée, mais elle manque de précision et de complétude dans la présentation des informations. Elle ne répond pas directement aux critères de métier et pourrait être présentée de manière plus concise et directe.","JSON, 5 of 5 criteria",0.018594773932690913,"```json
+{
+  ""exactitude"": 3,
+  ""clarté"": 3,
+  ""structure"": 3,
+  ""completude"": 3,
+  ""utilite"": 3,
+  ""commentaire"": ""La réponse est claire et structurée, mais elle manque de précision et de complétude dans la présentation des informations. Elle ne répond pas directement aux critères de métier et pourrait être présentée de manière plus concise et directe.""
+}
+```"
+llama3.1:8b,qwen2.5:1.5b,T2_03_dissertation,T2,86d86978425d,5.0,"La réponse est complète, claire et bien structurée. Elle présente les avantages et les inconvénients de l'open source dans le domaine de l'intelligence artificielle de manière nuancée et équilibrée.","JSON, 5 of 5 criteria",0.036714865857963644,"```
+{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est complète, claire et bien structurée. Elle présente les avantages et les inconvénients de l'open source dans le domaine de l'intelligence artificielle de manière nuancée et équilibrée.""
+}
+```"
+qwen2.5:7b,qwen2.5:1.5b,T2_03_dissertation,T2,86d86978425d,4.0,"La réponse est claire et structurée, couvrant les points essentiels. Cependant, elle pourrait être légèrement améliorée en termes de précision et de complétude pour atteindre un score de 5.","JSON, 5 of 5 criteria",0.030441563673686157,"{
+  ""exactitude"": 4,
+  ""clarté"": 4,
+  ""structure"": 4,
+  ""completude"": 4,
+  ""utilite"": 4,
+  ""commentaire"": ""La réponse est claire et structurée, couvrant les points essentiels. Cependant, elle pourrait être légèrement améliorée en termes de précision et de complétude pour atteindre un score de 5.""
+}"
+llama3.1:8b,qwen2.5:7b,T1_04_traduction,T1,af2e204a81eb,0.7000000000000001,"La réponse est presque exacte, mais manque un peu de clarté et de structure. Elle est cependant complète et utile pour le métier.","JSON, 5 of 5 criteria",0.01209682067522495,"{
+  ""exactitude"": 0.9,
+  ""clarté"": 0.8,
+  ""structure"": 0.7,
+  ""complétude"": 0.6,
+  ""utilité"": 0.5,
+  ""commentaire"": ""La réponse est presque exacte, mais manque un peu de clarté et de structure. Elle est cependant complète et utile pour le métier.""
+}"
+qwen2.5:7b,qwen2.5:7b,T1_04_traduction,T1,af2e204a81eb,4.8,La traduction est correcte et claire. Elle respecte la structure de la phrase originale et est complète. Elle est également utile pour un public métier.,"JSON, 5 of 5 criteria",0.009941218445895093,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La traduction est correcte et claire. Elle respecte la structure de la phrase originale et est complète. Elle est également utile pour un public métier.""
+}"
+llama3.1:8b,qwen2.5:0.5b,T1_01_factuel,T1,693d41c402ef,4.2,"La réponse est directe et précise, sans ambiguïté ni omission.","JSON, 5 of 5 criteria",0.009627015400456932,"{
+  ""exactitude"": 1,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est directe et précise, sans ambiguïté ni omission.""
+}"
+qwen2.5:7b,qwen2.5:0.5b,T1_01_factuel,T1,693d41c402ef,4.4,"La réponse est correcte et claire, mais pourrait être un peu plus structurée. Elle pourrait inclure une indication sur le fait que Canberra est la capitale de l'Australie.","JSON, 5 of 5 criteria",0.011370492860737071,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 4,
+  ""completude"": 4,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est correcte et claire, mais pourrait être un peu plus structurée. Elle pourrait inclure une indication sur le fait que Canberra est la capitale de l'Australie.""
+}"
+llama3.1:8b,qwen2.5:7b,T1_02_extraction,T1,20b056de577b,1.0,"La réponse est identique à la réponse de référence, avec les mêmes champs et les mêmes valeurs.","JSON, 5 of 5 criteria",0.009734961380301119,"{
+  ""exactitude"": 1,
+  ""clarté"": 1,
+  ""structure"": 1,
+  ""complétude"": 1,
+  ""utilité"": 1,
+  ""commentaire"": ""La réponse est identique à la réponse de référence, avec les mêmes champs et les mêmes valeurs.""
+}"
+qwen2.5:7b,qwen2.5:7b,T1_02_extraction,T1,20b056de577b,5.0,"La réponse est parfaitement exacte, claire, structurée et complète. Elle correspond exactement à la réponse de référence sans aucune omission ou inexactitude.","JSON, 5 of 5 criteria",0.011325024388331103,"```json
+{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est parfaitement exacte, claire, structurée et complète. Elle correspond exactement à la réponse de référence sans aucune omission ou inexactitude.""
+}
+```"
+llama3.1:8b,qwen2.5:7b,T3_03_code,T3,4c7f23048676,4.2,"La fonction est claire et efficace, elle utilise une compréhension de liste et la fonction min avec une clé personnalisée pour trouver le modèle avec le ratio énergie par token le plus bas.","JSON, 5 of 5 criteria",0.015100790009240597,"```json
+{
+  ""exactitude"": 1,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La fonction est claire et efficace, elle utilise une compréhension de liste et la fonction min avec une clé personnalisée pour trouver le modèle avec le ratio énergie par token le plus bas.""
+}
+```"
+qwen2.5:7b,qwen2.5:7b,T3_03_code,T3,4c7f23048676,5.0,"La réponse est claire, structurée et complète. Elle correspond exactement à la description de la fonction fournie dans la réponse de référence. L'implémentation en Python est pertinente et utile pour le métier impliquant la gestion et l'analyse des modèles.","JSON, 5 of 5 criteria",0.015398321047510764,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est claire, structurée et complète. Elle correspond exactement à la description de la fonction fournie dans la réponse de référence. L'implémentation en Python est pertinente et utile pour le métier impliquant la gestion et l'analyse des modèles.""
+}"
+llama3.1:8b,qwen2.5:3b,T1_02_extraction,T1,156bd57d63c2,4.2,"La réponse est exacte, claire, bien structurée, complète et utile pour le métier.","JSON, 5 of 5 criteria",0.012201021864505111,"Voici la réponse en JSON avec les critères évalués :
+
+```
+{
+  ""exactitude"": 1,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est exacte, claire, bien structurée, complète et utile pour le métier.""
+}
+```"
+qwen2.5:7b,qwen2.5:3b,T1_02_extraction,T1,156bd57d63c2,5.0,"La réponse est parfaitement conforme à la réponse de référence sur tous les critères. Les informations sont exactes, claires, bien structurées, complètes et utiles pour une utilisation métier.","JSON, 5 of 5 criteria",0.01191553788807672,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est parfaitement conforme à la réponse de référence sur tous les critères. Les informations sont exactes, claires, bien structurées, complètes et utiles pour une utilisation métier.""
+}"
+llama3.1:8b,qwen2.5:1.5b,T3_04_architecture,T3,2de94276d14b,4.0,"L'architecture proposée est complète et bien structurée, mais elle contient des répétitions dans la description des techniques de compression et de rétroaction.","JSON, 5 of 5 criteria",0.04661685993020994,"{
+  ""exactitude"": 4,
+  ""clarté"": 4,
+  ""structure"": 4,
+  ""complétude"": 4,
+  ""utilité"": 4,
+  ""commentaire"": ""L'architecture proposée est complète et bien structurée, mais elle contient des répétitions dans la description des techniques de compression et de rétroaction.""
+}"
+qwen2.5:7b,qwen2.5:1.5b,T3_04_architecture,T3,2de94276d14b,3.2,"La réponse couvre les principaux aspects demandés, mais elle manque de clarté et de structure. Les points sont répétitifs et certains détails sont inutilement répétés. La réponse pourrait être plus concise et mieux organisée pour améliorer la clarté et la structure.","JSON, 5 of 5 criteria",0.04801370350169328,"```json
+{
+  ""exactitude"": 4,
+  ""clarté"": 3,
+  ""structure"": 2,
+  ""completude"": 3,
+  ""utilite"": 4,
+  ""commentaire"": ""La réponse couvre les principaux aspects demandés, mais elle manque de clarté et de structure. Les points sont répétitifs et certains détails sont inutilement répétés. La réponse pourrait être plus concise et mieux organisée pour améliorer la clarté et la structure.""
+}
+```"
+llama3.1:8b,qwen2.5:7b,T2_04_comparaison,T2,2ac71c87e0a3,5.0,"La réponse est claire, structurée et complète. Elle répond aux critères de comparaison entre hébergement cloud et on-premise pour une banque, et propose une recommandation argumentée.","JSON, 5 of 5 criteria",0.025230771795058508,"{
+  ""exactitude"": 5,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est claire, structurée et complète. Elle répond aux critères de comparaison entre hébergement cloud et on-premise pour une banque, et propose une recommandation argumentée.""
+}"
+qwen2.5:7b,qwen2.5:7b,T2_04_comparaison,T2,2ac71c87e0a3,4.6,"La réponse est claire, structurée et complète. Elle couvre tous les critères demandés et fournit une recommandation argumentée. Cependant, elle ne mentionne pas explicitement l'élasticité et la dépendance fournisseur, qui sont des éléments importants du tableau de référence.","JSON, 5 of 5 criteria",0.025276017714666473,"```json
+{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""completude"": 5,
+  ""utilite"": 4,
+  ""commentaire"": ""La réponse est claire, structurée et complète. Elle couvre tous les critères demandés et fournit une recommandation argumentée. Cependant, elle ne mentionne pas explicitement l'élasticité et la dépendance fournisseur, qui sont des éléments importants du tableau de référence.""
+}
+```"
+llama3.1:8b,qwen2.5:7b,T1_01_factuel,T1,693d41c402ef,4.2,"La réponse est très claire et précise, et elle répond directement à la question posée.","JSON, 5 of 5 criteria",0.008763750778878055,"{
+  ""exactitude"": 1,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 5,
+  ""utilité"": 5,
+  ""commentaire"": ""La réponse est très claire et précise, et elle répond directement à la question posée.""
+}"
+qwen2.5:7b,qwen2.5:7b,T1_01_factuel,T1,693d41c402ef,4.4,"La réponse est correcte et claire, mais pourrait être un peu plus structurée. Elle pourrait inclure une indication sur le fait que Canberra est la capitale de l'Australie.","JSON, 5 of 5 criteria",0.010553090105245615,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 4,
+  ""completude"": 4,
+  ""utilite"": 5,
+  ""commentaire"": ""La réponse est correcte et claire, mais pourrait être un peu plus structurée. Elle pourrait inclure une indication sur le fait que Canberra est la capitale de l'Australie.""
+}"
+llama3.1:8b,qwen2.5:1.5b,T2_04_comparaison,T2,3aeba50befb2,4.4,"La réponse est claire et structurée, mais elle manque de complétude car elle ne prend pas en compte tous les critères de comparaison. La recommandation est également un peu vague et pourrait être plus argumentée.","JSON, 5 of 5 criteria",0.022432269734501593,"{
+  ""exactitude"": 4,
+  ""clarté"": 5,
+  ""structure"": 5,
+  ""complétude"": 4,
+  ""utilité"": 4,
+  ""commentaire"": ""La réponse est claire et structurée, mais elle manque de complétude car elle ne prend pas en compte tous les critères de comparaison. La recommandation est également un peu vague et pourrait être plus argumentée.""
+}"
+qwen2.5:7b,qwen2.5:1.5b,T2_04_comparaison,T2,3aeba50befb2,3.6,"La réponse manque plusieurs aspects importants mentionnés dans la réponse de référence, notamment l'élasticité, la dépendance fournisseur et la localisation des données. De plus, les coûts sont présentés de manière incomplète. Cependant, la structure est claire et la comparaison est utile pour les décisions métier.","JSON, 5 of 5 criteria",0.02159909217187274,"{
+  ""exactitude"": 3,
+  ""clarté"": 4,
+  ""structure"": 4,
+  ""completude"": 3,
+  ""utilite"": 4,
+  ""commentaire"": ""La réponse manque plusieurs aspects importants mentionnés dans la réponse de référence, notamment l'élasticité, la dépendance fournisseur et la localisation des données. De plus, les coûts sont présentés de manière incomplète. Cependant, la structure est claire et la comparaison est utile pour les décisions métier.""
+}"
+llama3.1:8b,qwen2.5:0.5b,T1_03_classification,T1,04716c6bbb05,0.0,"La réponse est incorrecte, la bonne réponse est 'Technique' et non 'Facturation'","JSON, 5 of 5 criteria",0.009713097593170522,"{
+  ""exactitude"": 0,
+  ""clarté"": 0,
+  ""structure"": 0,
+  ""complétude"": 0,
+  ""utilité"": 0,
+  ""commentaire"": ""La réponse est incorrecte, la bonne réponse est 'Technique' et non 'Facturation'""
+}"
+qwen2.5:7b,qwen2.5:0.5b,T1_03_classification,T1,04716c6bbb05,2.2,"La réponse est incorrecte en termes de technique de classification. Elle manque de clarté et de structure. De plus, elle ne fournit pas d'informations complètes sur la classification demandée. Toutefois, elle a une certaine utilité en indiquant que la réponse fournie ne correspond pas à la classification 'Technique'.","JSON, 5 of 5 criteria",0.0143152204880773,"{
+  ""exactitude"": 2,
+  ""clarté"": 3,
+  ""structure"": 1,
+  ""completude"": 2,
+  ""utilite"": 3,
+  ""commentaire"": ""La réponse est incorrecte en termes de technique de classification. Elle manque de clarté et de structure. De plus, elle ne fournit pas d'informations complètes sur la classification demandée. Toutefois, elle a une certaine utilité en indiquant que la réponse fournie ne correspond pas à la classification 'Technique'.""
+}"

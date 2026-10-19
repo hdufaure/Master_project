@@ -1,0 +1,10 @@
+# Measurement campaigns (notebooks 01 to 04) additionally need a local Ollama
+# server with the Qwen2.5 and Llama 3.1 models pulled. Notebook 05 and the
+# figure script need only the packages below.
+pandas>=2.0
+numpy>=1.24
+scipy>=1.11
+matplotlib>=3.7
+statsmodels>=0.14
+codecarbon==3.2.6
+ollama>=0.3

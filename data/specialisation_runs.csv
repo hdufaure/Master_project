@@ -1,0 +1,65 @@
+﻿Bloc,Tâche,Famille,Bras,Modèle,Consigne,Plafond tokens,Nb appels,Énergie (Wh),Durée (s),Chargement (s),Tokens output,Appel le plus long (s),Anomalie durée,Exactitude,Réponse,Horodatage
+A,A1_extraction_facture,Extraction,A4_grand_generique,qwen2.5:7b,generique,1024,1,0.1655133983333814,22.649595599999884,7.6384089,54,22.649595599999884,0,1,"```json
+{
+  ""date"": ""12/03/2025"",
+  ""montant"": ""1 250,00 € TTC"",
+  ""fournisseur"": ""Société Lumen SAS""
+}
+```",2026-10-06 12:06:30
+A,A1_extraction_facture,Extraction,A2_petit_specialise,qwen2.5:0.5b,specialise,96,1,0.0348516466672368,7.03993719999562,1.5827369,39,7.03993719999562,0,1,"{""date"": ""12/03/2025"", ""montant"": ""1250"", ""fournisseur"": ""Société Lumen SAS""}",2026-10-06 12:06:42
+A,A1_extraction_facture,Extraction,A3_moyen_specialise,qwen2.5:1.5b,specialise,96,1,0.05793682722254092,9.700893700006418,2.0737075,43,9.700893700006418,0,1,"{""date"": ""12/03/2025"", ""montant"": ""1 250,00"", ""fournisseur"": ""Société Lumen SAS""}",2026-10-06 12:06:56
+A,A1_extraction_facture,Extraction,A5_grand_specialise,qwen2.5:7b,specialise,96,1,0.23676494861117478,43.542961500003,10.7107556,43,43.542961500003,0,1,"{""date"": ""12/03/2025"", ""montant"": ""1 250,00"", ""fournisseur"": ""Société Lumen SAS""}",2026-10-06 12:07:45
+A,A1_extraction_facture,Extraction,A1_petit_generique,qwen2.5:0.5b,generique,1024,1,0.02300832472265176,7.069276499998523,1.0683168,51,7.069276499998523,0,1,"```json
+{
+  ""date"": ""12/03/2025"",
+  ""montant"": ""1250.00"",
+  ""fournisseur"": ""Société Lumen SAS""
+}
+```",2026-10-06 12:07:57
+A,A2_extraction_contact,Extraction,A2_petit_specialise,qwen2.5:0.5b,specialise,96,1,0.03630827777768069,9.710274100012612,0.8170006,49,9.710274100012612,0,1,"{""nom"": ""Claire Vasseur"", ""email"": ""joignable à claire.vasseur@groupe-nord.fr"", ""telephone"": ""01 44 72 09 31""}",2026-10-06 12:08:12
+A,A2_extraction_contact,Extraction,A5_grand_specialise,qwen2.5:7b,specialise,96,1,0.2426405230559307,46.19239290000405,9.1241488,45,46.19239290000405,0,1,"{""nom"": ""Claire Vasseur"", ""email"": ""claire.vasseur@groupe-nord.fr"", ""telephone"": ""01 44 72 09 31""}",2026-10-06 12:09:03
+A,A2_extraction_contact,Extraction,A4_grand_generique,qwen2.5:7b,generique,1024,1,0.15443253944432342,28.850339700002223,7.8669426,54,28.850339700002223,0,1,"```json
+{
+  ""nom"": ""Claire Vasseur"",
+  ""email"": ""claire.vasseur@groupe-nord.fr"",
+  ""telephone"": ""01 44 72 09 31""
+}
+```",2026-10-06 12:09:37
+A,A2_extraction_contact,Extraction,A3_moyen_specialise,qwen2.5:1.5b,specialise,96,1,0.05278768083347917,10.906652700010454,2.0656961,45,10.906652700010454,0,1,"{""nom"": ""Claire Vasseur"", ""email"": ""claire.vasseur@groupe-nord.fr"", ""telephone"": ""01 44 72 09 31""}",2026-10-06 12:09:53
+A,A2_extraction_contact,Extraction,A1_petit_generique,qwen2.5:0.5b,generique,1024,1,0.0235834136120224,6.675972400000319,1.0700946,54,6.675972400000319,0,1,"```json
+{
+  ""nom"": ""Claire Vasseur"",
+  ""email"": ""claire.vasseur@groupe-nord.fr"",
+  ""telephone"": ""01 44 72 09 31""
+}
+```",2026-10-06 12:10:05
+A,A3_classif_technique,Classification,A3_moyen_specialise,qwen2.5:1.5b,specialise,96,1,0.02408530388876442,6.807883000001311,1.3155473,2,6.807883000001311,0,0,Commercial,2026-10-06 12:10:16
+A,A3_classif_technique,Classification,A2_petit_specialise,qwen2.5:0.5b,specialise,96,1,0.017561304999422395,6.071597300004214,0.8124705,3,6.071597300004214,0,0,Réclamation,2026-10-06 12:10:28
+A,A3_classif_technique,Classification,A5_grand_specialise,qwen2.5:7b,specialise,96,1,0.12767719999998717,24.890850499999942,8.1263144,3,24.890850499999942,0,1,Technique,2026-10-06 12:10:58
+A,A3_classif_technique,Classification,A1_petit_generique,qwen2.5:0.5b,generique,1024,1,0.01537809888898435,6.0584924000140745,1.059796,3,6.0584924000140745,0,0,Facturation,2026-10-06 12:11:09
+A,A3_classif_technique,Classification,A4_grand_generique,qwen2.5:7b,generique,1024,1,0.09732365138951893,21.51638460002141,9.1583761,3,21.51638460002141,0,1,Technique,2026-10-06 12:11:35
+A,A4_classif_facturation,Classification,A1_petit_generique,qwen2.5:0.5b,generique,1024,1,0.012239434444936088,6.19888130002073,1.0633736,3,6.19888130002073,0,1,Facturation,2026-10-06 12:11:46
+A,A4_classif_facturation,Classification,A5_grand_specialise,qwen2.5:7b,specialise,96,1,0.1248070541670078,26.142133299988927,8.6190577,3,26.142133299988927,0,1,Facturation,2026-10-06 12:12:18
+A,A4_classif_facturation,Classification,A2_petit_specialise,qwen2.5:0.5b,specialise,96,1,0.017926890833967788,6.853472899994813,1.0662203,3,6.853472899994813,0,1,Facturation,2026-10-06 12:12:29
+A,A4_classif_facturation,Classification,A4_grand_generique,qwen2.5:7b,generique,1024,1,0.09295153888899836,20.5426856999984,8.8782538,3,20.5426856999984,0,1,Facturation,2026-10-06 12:12:55
+A,A4_classif_facturation,Classification,A3_moyen_specialise,qwen2.5:1.5b,specialise,96,1,0.030582251111350333,9.555999700009124,2.3296218,3,9.555999700009124,0,1,Facturation,2026-10-06 12:13:10
+A,A5_traduction_comite,Traduction,A2_petit_specialise,qwen2.5:0.5b,specialise,96,1,0.019041636944474725,6.362035500002094,1.0720051,12,6.362035500002094,0,0,The committee of the pilot is postponed to next week.,2026-10-06 12:13:21
+A,A5_traduction_comite,Traduction,A3_moyen_specialise,qwen2.5:1.5b,specialise,96,1,0.027345784166027752,7.6299862999876495,1.3233576,11,7.6299862999876495,0,1,The steering committee is rescheduled for next Thursday.,2026-10-06 12:13:34
+A,A5_traduction_comite,Traduction,A5_grand_specialise,qwen2.5:7b,specialise,96,1,0.13295073111096975,27.775288400007412,9.1418814,11,27.775288400007412,0,1,The steering committee is rescheduled for next Thursday.,2026-10-06 12:14:06
+A,A5_traduction_comite,Traduction,A4_grand_generique,qwen2.5:7b,generique,1024,1,0.08677775861118685,18.20925429998897,7.8569394,10,18.20925429998897,0,1,"""The steering committee is postponed to next Thursday.""",2026-10-06 12:14:30
+A,A5_traduction_comite,Traduction,A1_petit_generique,qwen2.5:0.5b,generique,1024,1,0.015784241666536598,5.978583200019784,1.0648412,16,5.978583200019784,0,0,Le comité de pilotage est reporté à mardi prochain.,2026-10-06 12:14:41
+A,A6_traduction_livraison,Traduction,A4_grand_generique,qwen2.5:7b,generique,1024,1,0.08438189194443632,17.135557000001427,7.8847373,9,17.135557000001427,0,1,"""The delivery is two weeks behind schedule.""",2026-10-06 12:15:03
+A,A6_traduction_livraison,Traduction,A5_grand_specialise,qwen2.5:7b,specialise,96,1,0.11913242111181215,23.51955500000622,7.6173845,9,23.51955500000622,0,1,The delivery is delayed by two weeks.,2026-10-06 12:15:31
+A,A6_traduction_livraison,Traduction,A2_petit_specialise,qwen2.5:0.5b,specialise,96,1,0.017246064999830304,7.035377099993639,1.0784407,9,7.035377099993639,0,1,The delivery is delayed by two weeks.,2026-10-06 12:15:43
+A,A6_traduction_livraison,Traduction,A1_petit_generique,qwen2.5:0.5b,generique,1024,1,0.014446415000299343,6.123934899980668,0.8176675,31,6.123934899980668,0,0,"""La livraison est retardée de deux semaines."" traduit en anglais serait : ""La livraison est retardée de deux semaines.""",2026-10-06 12:15:55
+A,A6_traduction_livraison,Traduction,A3_moyen_specialise,qwen2.5:1.5b,specialise,96,1,0.03156569805631506,9.715951499994844,2.3183003,10,9.715951499994844,0,1,The delivery is being delayed by two weeks.,2026-10-06 12:16:09
+A,A7_norm_date,Normalisation,A4_grand_generique,qwen2.5:7b,generique,1024,1,0.10374550833318974,22.393520099984016,9.1341082,11,22.393520099984016,0,1,2025-03-03,2026-10-06 12:16:37
+A,A7_norm_date,Normalisation,A2_petit_specialise,qwen2.5:0.5b,specialise,96,1,0.02006606805580518,6.751141499989899,1.0674024,11,6.751141499989899,0,1,2025-03-03,2026-10-06 12:16:49
+A,A7_norm_date,Normalisation,A1_petit_generique,qwen2.5:0.5b,generique,1024,1,0.012480732777356306,5.662191999988863,0.8109032,11,5.662191999988863,0,0,03-03-2025,2026-10-06 12:16:59
+A,A7_norm_date,Normalisation,A3_moyen_specialise,qwen2.5:1.5b,specialise,96,1,0.032600126666781644,8.87754670000868,2.0682864,11,8.87754670000868,0,1,2025-03-03,2026-10-06 12:17:13
+A,A7_norm_date,Normalisation,A5_grand_specialise,qwen2.5:7b,specialise,96,1,0.13051733722242778,24.39411329998984,7.8623866,11,24.39411329998984,0,1,2025-03-03,2026-10-06 12:17:43
+A,A8_norm_montant,Normalisation,A4_grand_generique,qwen2.5:7b,generique,1024,1,0.08669412499977215,18.170529399998486,7.1097981,7,18.170529399998486,0,0,1250.5,2026-10-06 12:18:06
+A,A8_norm_montant,Normalisation,A5_grand_specialise,qwen2.5:7b,specialise,96,1,0.12513180916595548,25.92184000002453,7.6171745,8,25.92184000002453,0,1,1250.50,2026-10-06 12:18:37
+A,A8_norm_montant,Normalisation,A2_petit_specialise,qwen2.5:0.5b,specialise,96,1,0.01940513027729101,7.0585920000157785,1.0563787,7,7.0585920000157785,0,0,300.00,2026-10-06 12:18:49
+A,A8_norm_montant,Normalisation,A3_moyen_specialise,qwen2.5:1.5b,specialise,96,1,0.03465059277716791,9.681358500005445,2.0735427,8,9.681358500005445,0,1,1250.50,2026-10-06 12:19:04
+A,A8_norm_montant,Normalisation,A1_petit_generique,qwen2.5:0.5b,generique,1024,1,0.011778276666249468,5.880946399993263,0.8217173,8,5.880946399993263,0,0,1255.25,2026-10-06 12:19:15

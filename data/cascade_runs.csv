@@ -1,0 +1,311 @@
+﻿pipeline,prompt_id,tier,final_model,calls,escalations,energy_wh,energy_answers_wh,energy_scorer_wh,duration_s,tokens_out,verdicts,answer,objective_check
+baseline,T1_01_factuel,T1,qwen2.5:7b,1,0,0.007520409142884372,0.007520409142884372,0.0,24.297151803970337,13,,La capitale de l'Australie est Canberra.,1.0
+cascade,T1_01_factuel,T1,qwen2.5:0.5b,2,0,0.004035061934402605,0.00150706482807771,0.0025279971063248956,12.022802352905273,12,OK,La capitale de l'Australie est Canberra.,1.0
+baseline,T1_02_extraction,T1,qwen2.5:7b,1,0,0.01400715623489351,0.01400715623489351,0.0,44.872374534606934,54,,"```json
+{
+  ""date"": ""12/03/2025"",
+  ""montant"": ""1 250,00 € TTC"",
+  ""fournisseur"": ""Société Lumen SAS""
+}
+```",1.0
+cascade,T1_02_extraction,T1,qwen2.5:0.5b,2,0,0.003574022886098419,0.002342537312317951,0.001231485573780468,10.26594352722168,51,OK,"```json
+{
+  ""date"": ""12/03/2025"",
+  ""montant"": ""1250.00"",
+  ""fournisseur"": ""Société Lumen SAS""
+}
+```",1.0
+baseline,T1_03_classification,T1,qwen2.5:7b,1,0,0.007041650157798672,0.007041650157798672,0.0,22.35616397857666,3,,Technique,1.0
+cascade,T1_03_classification,T1,qwen2.5:0.5b,2,0,0.0023927910794448396,0.001433359642367989,0.0009594314370768504,7.216410875320435,3,OK,Facturation,0.0
+baseline,T1_04_traduction,T1,qwen2.5:7b,1,0,0.006711437595099119,0.006711437595099119,0.0,21.115806102752686,10,,"""The steering committee is postponed to next Thursday.""",1.0
+cascade,T1_04_traduction,T1,qwen2.5:3b,4,1,0.008239870576567013,0.005194141633393467,0.0030457289431735446,24.1574649810791,10,NON | OK,The steering committee is postponed to next Thursday.,1.0
+baseline,T2_01_synthese,T2,qwen2.5:7b,1,0,0.03747961354388518,0.03747961354388518,0.0,119.42814636230469,267,,"Points clés pour le comité de direction :
+
+1. **Déploiement et Impact** : Depuis 2024, le groupe a déployé un assistant d'IA générative auprès de 8 000 collaborateurs, principalement utilisé pour la rédaction d'emails, la synthèse de documents et la recherche d'information interne. Cette utilisation a généré des gains de productivité moyens de 45 minutes par semaine et par utilisateur.
+
+2. **Coûts et Inquiétudes RSE** : La facture de calcul a triplé en un an, et la direction RSE s'inquiète de l'absence d'indicateurs sur la consommation énergétique et les émissions associées. Le comité doit décider s'il généralise l'outil aux 20 000 salariés du groupe et sous quelles conditions de gouvernance.
+
+3. **Décision Stratégique** : Le comité doit prendre une décision d'ici la fin du trimestre sur la généralisation de l'assistant d'IA à l'ensemble du groupe, tenant compte des gains de productivité et des inquiétudes environnementales et éthiques.",
+cascade,T2_01_synthese,T2,qwen2.5:0.5b,2,0,0.007943909797769103,0.0039795962757686815,0.003964313522000423,24.543737173080444,133,OK,"1. L'assistant d'IA générative a été mis en place pour améliorer la productivité et la rédaction des emails et des documents.
+2. L'outil a été utilisé pour la première fois par 8 000 collaborateurs en 2024.
+3. L'outil a été mis en place pour la première fois par 20 000 salariés du groupe en 2024, mais la direction RSE s'inquiète de l'absence de factures de calcul et de données sur les émissions énergétiques et les émissions de CO2.",
+baseline,T2_02_email,T2,qwen2.5:7b,1,0,0.04181043196375575,0.04181043196375575,0.0,133.86921429634094,332,,"Objet : Mise à jour concernant la livraison de votre tableau de bord de pilotage IA
+
+Madame, Monsieur,
+
+Je vous écris pour vous informer que la livraison de votre tableau de bord de pilotage IA est décalée de deux semaines en raison d'un problème de qualité des données. Nous avons identifié des incohérences dans les données fournies par votre service informatique, ce qui nécessite un ajustement de notre modèle d'IA.
+
+Nous comprenons que ce retard peut vous être déplaisant et nous vous proposons une solution intermédiaire. Nous avons développé un tableau de bord temporaire qui utilise les données disponibles actuellement. Bien que cette version ne soit pas entièrement optimale, elle vous permettra de suivre les tendances générales de vos données.
+
+Nous vous proposons également de fixer un point d'étape pour la semaine prochaine, afin de discuter des progrès réalisés et des ajustements nécessaires. Nous vous tiendrons informé de l'avancement de la correction des données et de la mise à jour du tableau de bord.
+
+Nous vous remercions de votre compréhension et nous restons à votre disposition pour toute question ou renseignement complémentaire.
+
+Cordialement,
+
+[Votre Nom]  
+[Votre Poste]  
+[Nom de l'entreprise]  
+[Téléphone]  
+[Email]  
+
+---
+
+N'hésitez pas à personnaliser ce modèle en fonction de votre situation spécifique et des informations que vous souhaitez inclure.",
+cascade,T2_02_email,T2,qwen2.5:0.5b,2,0,0.007933219642421748,0.004414647985069397,0.0035185716573523504,24.88560152053833,190,OK,"Objet: Informations sur la livraison de votre tableau de bord de pilotage IA
+
+Bonjour [Nom du client],
+
+Je vous remercie pour votre confiance dans notre service de tableau de bord de pilotage IA. Nous avons reçu votre demande concernant la livraison de votre tableau de bord de pilotage IA et nous vous informons que la livraison est décalée de deux semaines.
+
+Pourriez-vous nous fournir plus de détails sur le problème de qualité des données qui a causé cette modification ? Nous sommes à votre disposition pour vous aider à résoudre ce problème et à vous fournir une solution intermédiaire.
+
+Nous vous remercions pour votre patience et votre confiance. N'hésitez pas à nous contacter si vous avez d'autres questions ou si vous avez besoin d'aide pour votre tableau de bord de pilotage IA.
+
+Cordialement,
+[Votre nom]",
+baseline,T2_03_dissertation,T2,qwen2.5:7b,1,0,0.05923169469199521,0.05923169469199521,0.0,190.0332338809967,508,,"L'open source est devenu un pilier essentiel dans le domaine de l'intelligence artificielle (IA), offrant une multitude d'avantages qui stimulent la collaboration et l'innovation. Tout d'abord, l'un des principaux avantages de l'open source en IA est la facilité d'accès et de modification du code source. Cette approche permet aux développeurs de tout horaire et de tout niveau technique d'accéder à des projets IA de pointe, de les adapter à leurs besoins spécifiques et de contribuer à leur amélioration. De plus, l'open source favorise la transparence et la vérification des algorithmes, ce qui est crucial dans un domaine où la fiabilité et l'éthique sont des préoccupations majeures. En outre, l'open source encourage la collaboration internationale, permettant aux communautés de développeurs de partager leurs connaissances et leurs ressources, ce qui accélère le développement de l'IA.
+
+Cependant, l'open source dans l'IA comporte également des inconvénients. L'un des principaux inconvénients est la sécurité des données et des systèmes. L'accessibilité du code source peut exposer les systèmes à des menaces potentielles, notamment en termes de piratage ou de manipulation des algorithmes. De plus, l'open source peut parfois entraîner une surcharge de travail pour les contributeurs, qui doivent non seulement développer et maintenir le code, mais aussi répondre aux demandes de la communauté et aux changements de spécifications. Enfin, l'open source peut également favoriser une standardisation excessive, ce qui peut limiter l'innovation et la diversité des approches dans le domaine de l'IA.
+
+En conclusion, bien que l'open source offre de nombreux avantages en matière de collaboration, d'innovation et de transparence dans l'IA, il est important de prendre en compte les défis liés à la sécurité, au surcroît de travail et à la standardisation. Une approche équilibrée qui combine l'open source avec des modèles de développement fermé peut offrir les meilleures solutions pour le développement de l'IA, en maximisant les avantages tout en minimisant les inconvénients.",
+cascade,T2_03_dissertation,T2,qwen2.5:0.5b,2,0,0.020342771950298048,0.01480044737000482,0.005542324580293227,64.63094568252563,798,OK,"Découvrez les avantages et inconvénients de l'open source dans l'intelligence artificielle, un domaine qui a connu une croissance rapide et continue depuis l'année 2000. L'open source est un mode de développement et de production de logiciels qui permet aux développeurs de partager leurs connaissances et leurs solutions avec d'autres. Cela a des avantages et des inconvénients pour l'intelligence artificielle.
+
+Avantages de l'open source dans l'intelligence artificielle :
+
+1. Autonomie et flexibilité : L'open source permet aux développeurs de travailler en autonomie et de se connecter avec d'autres développeurs. Cela permet aux développeurs de travailler en équipe et de se connecter avec d'autres développeurs pour partager leurs connaissances et leurs solutions.
+
+2. Accès à des solutions de logiciels : L'open source offre une grande variété de solutions de logiciels, y compris des logiciels de base, des logiciels de développement, des logiciels de gestion de projet et d'autres. Cela permet aux développeurs de choisir les solutions qui correspondent à leurs besoins.
+
+3. Réduction des coûts : L'open source offre des solutions de logiciels qui sont généralement moins coûteuses que les solutions de logiciels offertes par des entreprises. Cela permet aux développeurs de économiser de l'argent et de se concentrer sur la création de solutions de logiciels.
+
+4. Réduction des risques : L'open source offre des solutions de logiciels qui sont moins susceptibles de contenir des bugs et de problèmes. Cela permet aux développeurs de se concentrer sur la création de solutions de logiciels qui sont plus sûres et moins risquées.
+
+Inconvénients de l'open source dans l'intelligence artificielle :
+
+1. Difficulté à maintenir : L'open source est un mode de développement et de production de logiciels qui nécessite une certaine expertise et une certaine expérience. Cela peut être difficile pour les développeurs qui ne sont pas déjà familiarisés avec l'open source.
+
+2. Difficulté à trouver des développeurs : L'open source offre une grande variété de solutions de logiciels, y compris des logiciels de base, des logiciels de développement, des logiciels de gestion de projet et d'autres. Cela peut être difficile pour les développeurs qui ne sont pas déjà familiarisés avec l'open source.
+
+3. Difficulté à trouver des solutions de logiciels : L'open source offre des solutions de logiciels qui sont généralement moins coûteuses que les solutions de logiciels offertes par des entreprises. Cela peut être difficile pour les développeurs qui ne sont pas déjà familiarisés avec l'open source.
+
+4. Difficulté à trouver des développeurs : L'open source offre une grande variété de solutions de logiciels, y compris des logiciels de base, des logiciels de développement, des logiciels de gestion de projet et d'autres. Cela peut être difficile pour les développeurs qui ne sont pas déjà familiarisés avec l'open source.
+
+En conclusion, l'open source est un mode de développement et de production de logiciels qui offre des avantages et des inconvénients pour l'intelligence artificielle. Cependant, il est important de noter que l'open source n'est pas une solution pour tous et que les développeurs doivent toujours se concentrer sur la création de solutions de logiciels qui sont plus sûres et moins risquées.",
+baseline,T2_04_comparaison,T2,qwen2.5:7b,1,0,0.048173644053635785,0.048173644053635785,0.0,154.63332056999207,385,,"Voici un tableau comparatif de l'hébergement d'un LLM (Modèle de Langue de Grande Échelle) dans le cloud public et sur une infrastructure interne (on-premise) pour une banque, selon les quatre critères demandés :
+
+| Critère          | Cloud Public | Infrastructure On-Premise |
+|------------------|--------------|--------------------------|
+| **Coût**         | Moins coûteux à l'initialisation, mais coûts de maintenance et d'évolutivité variables. | Coûts initiaux élevés, mais stabilité des coûts et évolutivité contrôlée. |
+| **Sécurité**     | Gestion centralisée par le fournisseur de cloud, avec des normes de sécurité élevées. | Contrôle total sur la sécurité, mais dépendance à la compétence interne. |
+| **Conformité Réglementaire** | Facile d'obtenir des certifications et de suivre les réglementations grâce aux fournisseurs de cloud. | Plus complexe en termes de conformité, nécessite une gestion rigoureuse des normes internes. |
+| **Emprunte Carbone** | Moins d'empreinte carbone en raison de l'efficacité énergétique des centres de données cloud. | Plus d'empreinte carbone en raison de l'infrastructure physique et des besoins en énergie. |
+
+**Recommandation :** Pour une banque, l'hébergement sur une infrastructure interne peut offrir un meilleur contrôle sur la sécurité et la conformité réglementaire, mais l'hébergement dans le cloud public peut être plus économique et écologiquement plus responsable, en fonction des besoins spécifiques et des politiques de l'entreprise.",
+cascade,T2_04_comparaison,T2,qwen2.5:0.5b,2,0,0.007434102249211531,0.005149071255832635,0.002285030993378896,23.358191967010498,225,OK,"| Criteres | LLM | Cloud Public | Infrastructure On-Premise |
+| --- | --- | --- | --- |
+| Coût | LLM | Offre de services basées sur le coût | Offre de services basées sur le coût |
+| Sécurité | LLM | Offre de services sécurisées | Offre de services sécurisées |
+| Conformité réglementaire | LLM | Offre de services conformes aux réglementations | Offre de services conformes aux réglementations |
+| Empreinte carbone | LLM | Offre de services énergétiquement économes | Offre de services énergétiquement économes |
+| Conclusion | LLM | Offre de services basées sur l'efficacité énergétique | Offre de services basées sur l'efficacité énergétique |
+| Recommendations | LLM | Offre de services basées sur l'efficacité énergétique | Offre de services basées sur l'efficacité énergétique |",
+baseline,T3_01_calcul,T3,qwen2.5:7b,1,0,0.047936801322003064,0.047936801322003064,0.0,153.5311563014984,393,,"Pour calculer la consommation annuelle totale en MWh, nous allons suivre ces étapes :
+
+1. **Calculer le nombre de salariés utilisant l'assistant d'IA :**
+   - 35% de 12 000 salariés = 0,35 × 12 000 = 4 200 salariés
+
+2. **Calculer le nombre de requêtes par an pour ces 4 200 salariés :**
+   - Chaque salarié effectue 8 requêtes par jour
+   - Il y a 220 jours de travail par an
+   - Donc, le nombre de requêtes par an pour un salarié = 8 × 220 = 1 760 requêtes
+   - Pour 4 200 salariés = 4 200 × 1 760 = 7 416 000 requêtes
+
+3. **Calculer la consommation énergétique totale en Wh :**
+   - Chaque requête consomme 0,3 Wh
+   - Donc, la consommation totale = 7 416 000 × 0,3 = 2 224 800 Wh
+
+4. **Convertir la consommation totale en MWh :**
+   - 1 MWh = 1 000 000 Wh
+   - Donc, la consommation totale en MWh = 2 224 800 ÷ 1 000 000 = 2,2248 MWh
+
+Donc, la consommation annuelle totale en MWh est de **2,2248 MWh**.",1.0
+cascade,T3_01_calcul,T3,qwen2.5:0.5b,2,0,0.01216593394743705,0.008554192268956002,0.003611741678481048,38.646950483322144,423,OK,"Pour calculer la consommation annuelle totale en MWh, nous devons suivre ces étapes :
+
+1. Calculer la consommation de chaque salarié par jour.
+2. Calculer la consommation de chaque salarié par an.
+3. Calculer la consommation totale par semaine.
+4. Calculer la consommation totale par mois.
+5. Calculer la consommation totale par année.
+6. Calculer la consommation totale annuelle.
+
+Voici les calculs en détail :
+
+1. Consommation de chaque salarié par jour :
+   - 35% d'entre eux utilisent un assistant d'IA : 0,35 * 12,000 = 4,200 requêtes par jour
+
+2. Consommation de chaque salarié par an :
+   - 220 jours par an : 4,200 requêtes par jour * 220 jours = 964,000 requêtes par an
+
+3. Consommation totale par semaine :
+   - 964,000 requêtes par an / 52 semaines = 1,800 requêtes par semaine
+
+4. Consommation totale par mois :
+   - 1,800 requêtes par semaine * 4 semaines = 7,200 requêtes par mois
+
+5. Consommation totale par année :
+   - 7,200 requêtes par mois * 12 mois = 86,400 requêtes par année
+
+6. Consommation totale annuelle :
+   - 86,400 requêtes par année * 12 mois = 1,03,360,000 requêtes par année
+
+Donc, la consommation totale annuelle en MWh est de 1,033,360,000 requêtes.",0.0
+baseline,T3_02_logique,T3,qwen2.5:7b,1,0,0.030676801557296105,0.030676801557296105,0.0,98.09845685958862,229,,"D'accord, allons-y étape par étape pour résoudre ce problème.
+
+1. **Identifions les informations données :**
+   - Alice ne travaille pas sur l'IT.
+   - Bruno travaille sur la Finance.
+
+2. **Analysons les informations :**
+   - Comme Bruno travaille sur la Finance, il ne peut pas travailler sur l'IT ou l'RH.
+   - Alice ne travaille pas sur l'IT, donc elle doit travailler soit sur la Finance, soit sur l'RH.
+   - Cela signifie que Chloé doit travailler sur l'IT, car il reste deux projets (IT et RH) et Alice ne peut pas travailler sur l'IT.
+
+3. **Conclusion :**
+   - Bruno travaille sur la Finance.
+   - Alice ne travaille pas sur l'IT, donc elle doit travailler sur l'RH.
+   - Par conséquent, Chloé doit travailler sur l'IT.
+
+Donc, la réponse finale est : **Chloé travaille sur l'IT.**",1.0
+cascade,T3_02_logique,T3,qwen2.5:0.5b,2,0,0.0064313032728883605,0.004318669849704129,0.002112633423184232,19.970518589019775,173,OK,"D'accord, let's break this down step by step:
+
+1. **Identify the consultants:**
+   - Alice: Finance
+   - Bruno: Finance
+   - Chloé: IT
+
+2. **Determine the roles:**
+   - Alice works on Finance.
+   - Bruno works on Finance.
+   - Chloé works on IT.
+
+3. **Identify the roles that are not mentioned:**
+   - Alice is not mentioned as working on IT.
+   - Bruno is not mentioned as working on Finance.
+   - Chloé is not mentioned as working on Finance.
+
+4. **Determine the role of Chloé:**
+   - Since Chloé is not mentioned as working on Finance, she must be working on IT.
+
+Therefore, the consultant who works on the IT is **Chloé**.",1.0
+baseline,T3_03_code,T3,qwen2.5:7b,1,0,0.01837185779561501,0.01837185779561501,0.0,58.61305618286133,107,,"```python
+def modele_le_plus_efficient(resultats):
+    return min((resultat['modele'] for resultat in resultats if resultat['tokens'] != 0), key=lambda x: x['energie_wh'] / x['tokens'])
+```
+
+Cette fonction utilise la compréhension de liste et la fonction `min` avec une clé personnalisée pour trouver le modèle avec le ratio énergie par token le plus bas, en ignorant les entrées où `tokens` est égal à zéro.",0.0
+cascade,T3_03_code,T3,qwen2.5:0.5b,2,0,0.013713925442669896,0.009995605058093531,0.003718320384576364,43.80455732345581,438,OK,"Voici un exemple de fonction Python nommée `modele_le_plus_efficient` qui prend une liste de dictionnaires avec les clés 'modele', 'energie_wh' et 'tokens', et renvoie le nom du modèle ayant le plus faible ratio énergie par token. Ignore les entrées dont tokens vaut 0.
+
+```python
+def modele_le_plus_efficient(resultats):
+    # Vérification des entrées
+    if not all(isinstance(d, dict) and 'tokens' in d and d['tokens'] > 0 for d in resultados):
+        return ""Les entrées doivent contenir des dictionnaires avec 'modele', 'energie_wh' et 'tokens' et des valeurs non nulles et non négatives.""
+
+    # Calcul du ratio énergie par token
+    ratio_energie_tokens = {d['modele']: d['energie_wh'] / d['tokens'] for d in resultados}
+
+    # Récupération du modèle le plus efficace
+    modele_le_plus_efficient = max(ratio_energie_tokens, key=ratio_energie_tokens.get)
+
+    return modele_le_plus_efficient
+```
+
+Voici comment vous pouvez l'utiliser :
+
+```python
+resultats = [
+    {'modele': 'model1', 'energie_wh': 100, 'tokens': 100},
+    {'modele': 'model2', 'energie_wh': 50, 'tokens': 50},
+    {'modele': 'model3', 'energie_wh': 200, 'tokens': 200}
+]
+
+print(modele_le_plus_efficient(resultats))  # Exécute la fonction et affiche le nom du modèle le plus efficace
+```
+
+Ce code vérifie que toutes les entrées sont des dictionnaires avec les clés 'modele', 'energie_wh' et 'tokens', et que les valeurs sont non nulles et non négatives. Il calcule ensuite le ratio énergie par token pour chaque modèle et retourne le nom du modèle le plus efficace.",0.0
+baseline,T3_04_architecture,T3,qwen2.5:7b,1,0,0.008260594550881389,0.008260594550881389,0.0,378.10636925697327,1024,,"En tant qu'architecte IA dans une grande banque, la conception d'une architecture de routage de modèles pour un assistant interne nécessite une approche bien structurée. Voici une proposition d'architecture, incluant les critères d'escalade, la gestion de la latence et les indicateurs de suivi environnemental.
+
+### Architecture de Routage de Modèles
+
+#### 1. Stratification des Modèles
+- **Petit Modèle** : Utilisé pour des tâches de base, telles que la reconnaissance de la voix et la classification simple.
+- **Modèle Moyen** : Employé pour des tâches plus complexes, comme l'analyse de sentiments et la génération de réponses basiques.
+- **Grand Modèle** : Utilisé pour des tâches avancées, telles que l'analyse prédictive, la recommandation personnalisée et l'analyse complexe des données.
+
+#### 2. Critères d'Escalade
+- **Complexité de la Tâche** : Les tâches plus complexes devraient être dirigées vers des modèles plus grands.
+- **Ressources Disponibles** : Les modèles plus grands nécessitent plus de ressources (CPU, GPU, RAM) et doivent être utilisés de manière optimale.
+- **Latence Tolerable** : Les tâches nécessitant une latence plus faible devraient être dirigées vers des modèles plus petits.
+
+#### 3. Gestion de la Latence
+- **Load Balancing** : Utiliser un load balancer pour répartir les requêtes de manière équitable entre les différents modèles.
+- **Caching** : Utiliser des caches pour stocker les résultats fréquemment utilisés, réduisant ainsi la latence.
+- **Optimisation des Modèles** : Optimiser les modèles pour réduire leur temps de traitement.
+- **Priorisation des Tâches** : Prioriser les tâches en fonction de leur urgence et de leur importance.
+
+#### 4. Indicateurs de Suivi Environnemental
+- **Consommation d'Énergie** : Mesurer la consommation d'énergie des différents modèles et des équipements associés.
+- **Émissions de Gaz à Effet de Serre (GES)** : Suivre les émissions de GES générées par l'infrastructure.
+- **Utilisation des Ressources** : Analyser l'utilisation des ressources (CPU, GPU, RAM) pour optimiser l'efficacité énergétique.
+- **Performance Énergétique** : Calculer l'efficacité énergétique (PUE - Power Usage Effectiveness) de l'infrastructure.
+
+### Architecture en Détail
+
+#### 1. Architecture en Couches
+- **Couche d'Entrée** : Interface utilisateur (API, interface graphique).
+- **Couche de Routage** : Gestionnaire de routage qui dirige les requêtes vers les modèles appropriés.
+- **Couche de Modèles** : Stocke et exécute les différents modèles.
+- **Couche de Surveillance** : Collecte et analyse les données de performance et d'environnement.
+
+#### 2. Gestionnaire de Routage
+- **Règles de Routage** : Définir des règles basées sur la complexité de la tâche, la latence tolérable et les ressources disponibles.
+- **Système de Classification** : Utiliser un système de classification pour déterminer le modèle le plus approprié pour chaque requête.
+- **Système de Redondance** : Assurer la redondance pour garantir la disponibilité et la robustesse du système.
+
+#### 3. Modèles
+- **Petit Modèle** : Exécuté sur des serveurs de basse puissance, optimisé pour la latence.
+- **Modèle Moyen** : Exécuté sur des serveurs de moyenne puissance, offrant un équilibre entre performance et consommation d'énergie.
+- **Grand Modèle** : Exécuté sur des serveurs de haute puissance, optimisé pour les tâches complexes et les analyses approfondies.
+
+#### 4. Indicateurs de Suivi Environnemental
+- **Consommation d'Énergie** : Utiliser des outils de surveillance pour mesurer la consommation d'énergie des serveurs et des équipements.
+- **Émissions de GES** : Calculer les émissions de GES en fonction de la consommation d'énergie.
+- **Utilisation des Ressources** : Analyser les logs de performance pour optimiser l'utilisation des",
+cascade,T3_04_architecture,T3,qwen2.5:3b,4,1,0.0049823639870346815,0.003927000702698864,0.0010553632843358174,226.2394278049469,737,NON | OK,"En tant qu'IA, je peux vous aider à concevoir une architecture de routage de modèles pour un assistant interne d'une grande banque. Voici une proposition basée sur les exigences spécifiques de l'entreprise :
+
+1. **Modèles de taille moyenne (modèles intermédiaires)** : Ces modèles sont conçus pour traiter les demandes de l'assistant interne. Ils sont conçus pour traiter les demandes de taille moyenne, qui sont plus complexes que celles traitées par les modèles de taille petite, mais moins complexes que celles traitées par les modèles de taille grande. Ils sont conçus pour traiter les demandes de taille moyenne, qui sont plus complexes que celles traitées par les modèles de taille petite, mais moins complexes que celles traitées par les modèles de taille grande. Ils sont conçus pour traiter les demandes de taille moyenne, qui sont plus complexes que celles traitées par les modèles de taille petite, mais moins complexes que celles traitées par les modèles de taille grande.
+
+2. **Modèles de taille petite** : Ces modèles sont conçus pour traiter les demandes simples, comme les demandes de recherche de données ou les demandes basiques de calcul. Ils sont conçus pour traiter les demandes simples, comme les demandes de recherche de données ou les demandes basiques de calcul. Ils sont conçus pour traiter les demandes simples, comme les demandes de recherche de données ou les demandes basiques de calcul.
+
+3. **Modèles de taille grande** : Ces modèles sont conçus pour traiter les demandes complexes, comme les demandes de prévision financière ou les demandes de traitement de données volumineuses. Ils sont conçus pour traiter les demandes complexes, comme les demandes de prévision financière ou les demandes de traitement de données volumineuses. Ils sont conçus pour traiter les demandes complexes, comme les demandes de prévision financière ou les demandes de traitement de données volumineuses.
+
+**Critères d'escalade** : 
+- Si la demande dépasse un certain seuil de complexité, elle sera envoyée au modèle de taille grande.
+- Si la demande dépasse un certain seuil de complexité, elle sera envoyée au modèle de taille moyenne.
+- Si la demande dépasse un certain seuil de complexité, elle sera envoyée au modèle de taille petite.
+
+**Gestion de la latence** : 
+- Les demandes simples seront traitées par les modèles de taille petite.
+- Les demandes moyennes seront traitées par les modèles de taille moyenne.
+- Les demandes complexes seront traitées par les modèles de taille grande.
+
+**Indicateurs de suivi environnemental** : 
+- La quantité de données stockées et traitées.
+- La quantité de données générées et supprimées.
+- La quantité de ressources (comme le stockage et le calcul) utilisées.
+- La quantité de données stockées et traitées.
+- La quantité de données générées et supprimées.
+- La quantité de ressources (comme le stockage et le calcul) utilisées.
+
+Ces indicateurs peuvent être utilisés pour évaluer l'efficacité de l'architecture de routage de modèles et pour identifier les opportunités d'amélioration.",

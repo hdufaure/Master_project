@@ -1,0 +1,1282 @@
+﻿task,difficulty,arm,model,kind,parameters_b,energy_wh,duration_s,load_s,tokens_out,correct,why,code
+E1_branch_code,easy,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.0018861953750470188,4.64743709564209,1.3969309,29,0,AssertionError,"def branch_code(city, number):
+    return f""{city[0].upper()}{number:04d}""
+"
+E1_branch_code,easy,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.0029829210701686113,8.440444469451904,2.3929851,30,1,pass,"def branch_code(city, number):
+    return city.upper()[0:3] + str(number).zfill(4)
+"
+E1_branch_code,easy,general 3B,qwen2.5:3b,general,3.0,0.005190439198948463,15.743532419204712,4.1486167,32,0,AssertionError,"def branch_code(city, number):
+    return f""{city[:3].upper()}000{number:04d}""
+"
+E1_branch_code,easy,general 1.5B,qwen2.5:1.5b,general,1.5,0.003295096422248524,9.9225914478302,2.9953953,29,1,pass,"def branch_code(city, number):
+    return city[:3].upper() + str(number).zfill(4)
+"
+E1_branch_code,easy,general 7B,qwen2.5:7b,general,7.0,0.010581713814690632,33.69973301887512,10.5144988,29,1,pass,"def branch_code(city, number):
+    return city[:3].upper() + f""{number:04d}""
+"
+E1_branch_code,easy,general 0.5B,qwen2.5:0.5b,general,0.5,0.002114689727649471,6.4433369636535645,1.6198909,29,1,pass,"def branch_code(city, number):
+    return f""{city[:3].upper()}{number:04d}""
+"
+E1_branch_code,easy,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.005266603204779929,16.703997373580933,4.7440712,29,1,pass,"def branch_code(city, number):
+    return city[:3].upper() + f""{number:04d}""
+"
+E2_shipping_fee,easy,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.006749603827770766,21.409905433654785,4.1533782,59,1,pass,"def shipping_fee(weight_kg):
+    if weight_kg < 2:
+        return 5.90
+    elif weight_kg < 10:
+        return 9.90
+    else:
+        return 14.90
+"
+E2_shipping_fee,easy,general 7B,qwen2.5:7b,general,7.0,0.013699235752869349,43.91045904159546,10.3041923,59,0,AssertionError,"def shipping_fee(weight_kg):
+    if weight_kg < 2:
+        return 5.90
+    elif weight_kg <= 10:
+        return 9.90
+    else:
+        return 14.90
+"
+E2_shipping_fee,easy,general 3B,qwen2.5:3b,general,3.0,0.006694213339110549,21.19540500640869,4.3896409,59,0,AssertionError,"def shipping_fee(weight_kg):
+    if weight_kg < 2:
+        return 5.90
+    elif weight_kg <= 10:
+        return 9.90
+    else:
+        return 14.90
+"
+E2_shipping_fee,easy,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.004448709641241038,14.065396785736084,3.5272141,59,0,AssertionError,"def shipping_fee(weight_kg):
+    if weight_kg < 2:
+        return 5.90
+    elif weight_kg <= 10:
+        return 9.90
+    else:
+        return 14.90
+"
+E2_shipping_fee,easy,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.00267349214271687,8.233261823654175,1.6553172,59,0,AssertionError,"def shipping_fee(weight_kg):
+    if weight_kg < 2:
+        return 5.90
+    elif weight_kg <= 10:
+        return 9.90
+    else:
+        return 14.90
+"
+E2_shipping_fee,easy,general 1.5B,qwen2.5:1.5b,general,1.5,0.00422706521580343,13.338627338409424,2.9278514,62,1,pass,"def shipping_fee(weight_kg):
+    if weight_kg < 2:
+        return 5.90
+    elif 2 <= weight_kg < 10:
+        return 9.90
+    else:
+        return 14.90
+"
+E2_shipping_fee,easy,general 0.5B,qwen2.5:0.5b,general,0.5,0.0027041073225474097,8.477445363998413,1.6030641,62,0,AssertionError,"def shipping_fee(weight_kg):
+    if weight_kg < 2:
+        return 5.90
+    elif 2 <= weight_kg <= 10:
+        return 9.90
+    else:
+        return 14.90
+"
+E3_initials,easy,general 1.5B,qwen2.5:1.5b,general,1.5,0.003153217053223116,9.81222414970398,1.9187089,41,0,AssertionError,"def initials(full_name):
+    parts = full_name.split(' ')
+    initials = [part[0].upper() for part in parts]
+    return '.'.join(initials)
+"
+E3_initials,easy,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.003189374630263674,9.766050577163696,0.8648578,107,0,AssertionError,"def initials(full_name):
+    # Split the full name by spaces and hyphens
+    parts = full_name.split("" "")
+    # Initialize an empty list to store the initials
+    initials_list = []
+    # Iterate over each part in the list
+    for part in parts:
+        # Take the first letter of each part and convert it to uppercase
+        initials_list.append(part[0].upper())
+    # Join the list of initials wit"
+E3_initials,easy,general 7B,qwen2.5:7b,general,7.0,0.011923273729543857,37.98633098602295,9.4549636,45,1,pass,"def initials(full_name):
+    parts = full_name.replace('-', ' ').split()
+    initials = [part[0].upper() + '.' for part in parts]
+    return ''.join(initials)
+"
+E3_initials,easy,general 0.5B,qwen2.5:0.5b,general,0.5,0.0026509703488493143,8.113880395889282,1.3375281,73,0,AssertionError,"def initials(full_name):
+    # Split the name on spaces and hyphens
+    parts = full_name.split()
+    # Take the first letter of each part in uppercase
+    initials = [part[0].upper() for part in parts]
+    # Join the initials with a dot
+    return ""."".join(initials)
+"
+E3_initials,easy,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.005866174397185765,18.47859215736389,4.080785,41,0,AssertionError,"def initials(full_name):
+    parts = full_name.split()
+    initials = [part[0].upper() + '.' for part in parts]
+    return ''.join(initials)
+"
+E3_initials,easy,general 3B,qwen2.5:3b,general,3.0,0.005494866458747659,17.17721962928772,4.1173364,35,0,AssertionError,"def initials(full_name):
+    parts = [p.capitalize() for p in full_name.replace('-', ' ').split()]
+    return '.'.join(parts)
+"
+E3_initials,easy,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.0035150501354333707,10.632763147354126,2.1631382,42,0,AssertionError,"def initials(full_name):
+    parts = full_name.replace(""-"", "" "").split()
+    initials = ""."".join(part[0].upper() for part in parts)
+    return initials
+"
+E4_valid_reference,easy,general 3B,qwen2.5:3b,general,3.0,0.005198822602209858,16.185611963272095,2.3301099,44,1,pass,"import re
+
+def is_valid_reference(ref):
+    pattern = r'^[A-Z]{2}-\d{4}-[A-Z]$'
+    return bool(re.match(pattern, ref))
+"
+E4_valid_reference,easy,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.004416623313160459,13.706355810165405,1.6585809,188,0,AssertionError,"def is_valid_reference(ref):
+    """"""
+    Check if the given reference string is in the correct internal format.
+    
+    The format is: two uppercase letters, a hyphen, four digits, a hyphen, one uppercase letter.
+    """"""
+    # Check if the string has exactly 12 characters
+    if len(ref) != 12:
+        return False
+    
+    # Check if the string starts with two uppercase letters
+    if ref[0] != "
+E4_valid_reference,easy,general 0.5B,qwen2.5:0.5b,general,0.5,0.003848520011789634,11.875020980834961,0.8182745,159,1,pass,"import re
+
+def is_valid_reference(ref):
+    """"""
+    Check if the given reference string is valid according to the specified format.
+    
+    Parameters:
+    ref (str): The reference string to be checked.
+    
+    Returns:
+    bool: True if the reference is valid, False otherwise.
+    """"""
+    # Regular expression to match the internal format
+    pattern = r'^[A-Z]{2}-\d{4}-[A-Z]$'
+    # Check if th"
+E4_valid_reference,easy,general 7B,qwen2.5:7b,general,7.0,0.014269061957685332,45.222033977508545,10.4443195,60,0,AssertionError,"def is_valid_reference(ref):
+    return bool(ref == ref.upper() and ref[0:2].isalpha() and ref[2] == '-' and ref[3:7].isdigit() and ref[7] == '-' and ref[8].isalpha())
+"
+E4_valid_reference,easy,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.006633440709257859,20.970820665359497,4.7783644,55,0,AssertionError,"def is_valid_reference(ref):
+    return ref == ref.upper() and ref[0:2].isalpha() and ref[3:7].isdigit() and ref[7:9].isalpha() and ref[8] == '-'
+"
+E4_valid_reference,easy,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.0036716400843760924,11.336434602737427,2.6638005,46,1,pass,"import re
+
+def is_valid_reference(ref):
+    pattern = r'^[A-Z]{2}-\d{4}-[A-Z]{1}$'
+    return bool(re.match(pattern, ref))
+"
+E4_valid_reference,easy,general 1.5B,qwen2.5:1.5b,general,1.5,0.003512847818312265,10.60332703590393,2.369665,42,0,AssertionError,"import re
+
+def is_valid_reference(ref):
+    pattern = r'^[A-Z]-\d{4}-[A-Z]$'
+    return bool(re.match(pattern, ref))
+"
+E5_truncate,easy,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.005330503760432632,16.663917779922485,2.6547292,38,1,pass,"def truncate(text, limit):
+    if len(text) <= limit:
+        return text
+    else:
+        return text[:limit-1] + ""…""
+"
+E5_truncate,easy,general 3B,qwen2.5:3b,general,3.0,0.005494055885776242,17.059486627578735,4.3658875,35,1,pass,"def truncate(text, limit):
+    if len(text) <= limit:
+        return text
+    return text[:limit-1] + '…'
+"
+E5_truncate,easy,general 1.5B,qwen2.5:1.5b,general,1.5,0.0031281791393692913,9.505823850631714,1.7014049,38,0,AssertionError,"def truncate(text, limit):
+    if len(text) <= limit:
+        return text
+    else:
+        return text[:limit - 3] + ""…"""
+E5_truncate,easy,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.0018834923805880238,5.1995463371276855,1.1179113,35,0,AssertionError,"def truncate(text, limit):
+    if len(text) <= limit:
+        return text
+    else:
+        return text[:limit] + '...'
+"
+E5_truncate,easy,general 7B,qwen2.5:7b,general,7.0,0.010789230948305644,34.68442106246948,9.3998248,31,1,pass,"def truncate(text, limit):
+    return text if len(text) <= limit else text[:limit-1] + ""…""
+"
+E5_truncate,easy,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.003327113293083711,9.929080963134766,2.3749561,38,1,pass,"def truncate(text, limit):
+    if len(text) <= limit:
+        return text
+    else:
+        return text[:limit-1] + '…'
+"
+E5_truncate,easy,general 0.5B,qwen2.5:0.5b,general,0.5,0.00253581121570181,7.868777751922607,1.6230554,48,0,AssertionError,"def truncate(text, limit):
+    if len(text) <= limit:
+        return text
+    else:
+        return text[:limit] + ""…""  # Cut the text and append ""…"" to the end
+"
+M1_split_cents,medium,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.0073555063063959385,23.473440647125244,3.8804562,71,1,pass,"def split_cents(total_cents, parts):
+    if parts == 1:
+        return [total_cents]
+    shares = [total_cents // parts] * parts
+    remainder = total_cents % parts
+    for i in range(remainder):
+        shares[i] += 1
+    return shares
+"
+M1_split_cents,medium,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.004811141515719887,15.335366010665894,1.7247603,180,0,AssertionError,"def split_cents(total_cents, parts):
+    """"""
+    Splits an integer number of cents into parts shares. Every share is an integer,
+    the shares sum exactly to total_cents, and two shares never differ by more than one cent.
+    The larger shares come first.
+    
+    :param total_cents: Integer representing the total number of cents.
+    :param parts: Integer representing the number of shares.
+    :"
+M1_split_cents,medium,general 7B,qwen2.5:7b,general,7.0,0.014592993046660485,46.48957133293152,10.4195998,64,1,pass,"def split_cents(total_cents, parts):
+    base_share = total_cents // parts
+    extra_cents = total_cents % parts
+    shares = [base_share + 1 if i < extra_cents else base_share for i in range(parts)]
+    return shares
+"
+M1_split_cents,medium,general 3B,qwen2.5:3b,general,3.0,0.008468658915932204,26.97792339324951,4.9038944,80,1,pass,"def split_cents(total_cents, parts):
+    if parts == 1:
+        return [total_cents]
+    
+    part_size = total_cents // parts
+    extra_cents = total_cents % parts
+    shares = [part_size + (1 if i < extra_cents else 0) for i in range(parts)]
+    return shares
+"
+M1_split_cents,medium,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.004076847554961488,12.85884165763855,3.3115259,48,0,AssertionError,"def split_cents(total_cents, parts):
+    shares = []
+    for i in range(parts):
+        shares.append(total_cents // parts)
+        total_cents -= shares[-1]
+    return shares
+"
+M1_split_cents,medium,general 0.5B,qwen2.5:0.5b,general,0.5,0.005449990178510419,17.217262744903564,1.3367355,203,0,AssertionError,"def split_cents(total_cents, parts):
+    """"""
+    Splits an integer number of cents into parts shares.
+    Each share is an integer, the shares sum exactly to total_cents,
+    and two shares never differ by more than one cent.
+    The larger shares come first.
+
+    Parameters:
+    total_cents (int): The total number of cents to be split.
+    parts (int): The number of shares to be created.
+
+    Ret"
+M1_split_cents,medium,general 1.5B,qwen2.5:1.5b,general,1.5,0.0033750019342117595,10.453471422195435,2.3724633,42,0,AssertionError,"def split_cents(total_cents, parts):
+    shares = []
+    for i in range(parts):
+        shares.append(total_cents // (parts + i))
+    return shares
+"
+M2_apply_discounts,medium,general 7B,qwen2.5:7b,general,7.0,0.01204183021158098,38.475210666656494,10.2149077,40,1,pass,"def apply_discounts(price, discounts):
+    for discount in discounts:
+        price *= (1 - discount / 100)
+    return round(price, 2)
+"
+M2_apply_discounts,medium,general 0.5B,qwen2.5:0.5b,general,0.5,0.0035853829408981405,11.122913122177124,1.3348101,137,1,pass,"def apply_discounts(price, discounts):
+    """"""
+    Apply a list of successive percentage discounts to a price.
+
+    Args:
+    price (float): The original price.
+    discounts (list of float): A list of successive percentage discounts.
+
+    Returns:
+    float: The final price after applying all discounts.
+    """"""
+    for discount in discounts:
+        price *= (1 - discount / 100)
+    return round("
+M2_apply_discounts,medium,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.0038363183912822605,10.919835090637207,2.6442041,40,1,pass,"def apply_discounts(price, discounts):
+    for discount in discounts:
+        price *= (1 - discount / 100)
+    return round(price, 2)
+"
+M2_apply_discounts,medium,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.005971231597751137,19.080265760421753,3.8998754,40,1,pass,"def apply_discounts(price, discounts):
+    for discount in discounts:
+        price *= (1 - discount / 100)
+    return round(price, 2)
+"
+M2_apply_discounts,medium,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.00679924880907164,21.502368927001953,1.1379608,299,0,"AssertionError: Failed for 100, [10, 10, 10]. Expected 80.0, got 72.9.","def apply_discounts(price, discounts):
+    """"""
+    Apply successive percentage discounts to a price. Each discount applies to the price left by the previous one.
+    Round to two decimals once, at the very end, never in between.
+    
+    :param price: The original price.
+    :param discounts: A list of successive percentage discounts.
+    :return: The final price after all discounts.
+    """"""
+    f"
+M2_apply_discounts,medium,general 1.5B,qwen2.5:1.5b,general,1.5,0.0038518550794824306,12.070181608200073,2.6307456,46,1,pass,"import math
+
+def apply_discounts(price, discounts):
+    for discount in discounts:
+        price *= (100 - discount) / 100
+    return round(price, 2)
+"
+M2_apply_discounts,medium,general 3B,qwen2.5:3b,general,3.0,0.005911562624789976,18.791020154953003,4.3782728,42,1,pass,"def apply_discounts(price, discounts):
+    for discount in discounts:
+        price = price * (1 - discount / 100)
+    return round(price, 2)
+"
+M3_merge_stock,medium,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.008614420838089623,27.263011932373047,3.1557339,96,1,pass,"def merge_stock(warehouses):
+    merged_stock = {}
+    for warehouse in warehouses:
+        for article, quantity in warehouse.items():
+            if article in merged_stock:
+                merged_stock[article] += quantity
+            else:
+                merged_stock[article] = quantity
+    # Remove articles with zero quantity
+    merged_stock = {article: quantity for article, quantity in mer"
+M3_merge_stock,medium,general 3B,qwen2.5:3b,general,3.0,0.00800179185825141,24.62043046951294,2.5961317,83,1,pass,"def merge_stock(warehouses):
+    result = {}
+    for warehouse in warehouses:
+        for article, quantity in warehouse.items():
+            if quantity != 0:
+                if article in result:
+                    result[article] += quantity
+                else:
+                    result[article] = quantity
+    return {article: quantity for article, quantity in result.items() if quantity != "
+M3_merge_stock,medium,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.003950432303699202,12.277409553527832,1.193962,130,0,AssertionError,"def merge_stock(warehouses):
+    """"""
+    Merge a list of dictionaries, where each dictionary maps an article to a quantity,
+    and return one dictionary with the quantities added together. An article whose total is zero
+    must not appear in the result.
+    
+    :param warehouses: List of dictionaries, where each dictionary maps an article to a quantity.
+    :return: One dictionary with the quan"
+M3_merge_stock,medium,general 7B,qwen2.5:7b,general,7.0,0.015529759339005397,49.7244291305542,10.6975451,69,1,pass,"def merge_stock(warehouses):
+    from collections import defaultdict
+
+    merged = defaultdict(int)
+    for warehouse in warehouses:
+        for article, quantity in warehouse.items():
+            merged[article] += quantity
+
+    return dict((article, quantity) for article, quantity in merged.items() if quantity != 0)
+"
+M3_merge_stock,medium,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.004953592186721896,15.02547287940979,2.9298134,76,1,pass,"def merge_stock(warehouses):
+    result = {}
+    for warehouse in warehouses:
+        for article, quantity in warehouse.items():
+            if article in result:
+                result[article] += quantity
+            else:
+                result[article] = quantity
+    return {article: quantity for article, quantity in result.items() if quantity != 0}
+"
+M3_merge_stock,medium,general 1.5B,qwen2.5:1.5b,general,1.5,0.004381056216023222,13.736823797225952,2.3664256,70,0,AssertionError,"def merge_stock(warehouses):
+    result = {}
+    for warehouse in warehouses:
+        for article, quantity in warehouse.items():
+            if article in result and result[article] + quantity > 0:
+                result[article] += quantity
+            else:
+                result[article] = quantity
+    return result
+"
+M3_merge_stock,medium,general 0.5B,qwen2.5:0.5b,general,0.5,0.0027915228855109994,8.798896312713623,1.6318659,67,0,AssertionError,"def merge_stock(warehouses):
+    total_quantity = 0
+    result = {}
+    for warehouse in warehouses:
+        for article, quantity in warehouse.items():
+            if quantity == 0:
+                continue
+            total_quantity += quantity
+            result[article] = total_quantity
+    return result
+"
+M4_check_digit,medium,general 0.5B,qwen2.5:0.5b,general,0.5,0.0026596452172004915,8.161612033843994,0.8214011,60,0,AssertionError,"def check_digit(number):
+    total = 0
+    for digit in number:
+        total += int(digit) * (1 if len(number) > 1 else 2)
+    return (10 - total % 10) % 10
+"
+M4_check_digit,medium,general 7B,qwen2.5:7b,general,7.0,0.014156510957374021,45.31472682952881,9.7298694,51,1,pass,"def check_digit(number):
+    total = sum(int(number[i]) * (1 + i % 2) for i in range(len(number)))
+    return (10 - total % 10) % 10
+"
+M4_check_digit,medium,general 3B,qwen2.5:3b,general,3.0,0.007317082045242556,23.129640102386475,4.1157893,59,1,pass,"def check_digit(number):
+    total = 0
+    for i, digit in enumerate(number):
+        total += int(digit) * (i % 2 + 1)
+    return (10 - total % 10) % 10
+"
+M4_check_digit,medium,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.0028142141040364385,8.54758334159851,1.6294605,59,0,AssertionError,"def check_digit(number):
+    total = 0
+    for digit in number:
+        total += int(digit) * (1 if digit != '0' else 0)
+    return (10 - total % 10) % 10
+"
+M4_check_digit,medium,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.007271176141790159,22.980716228485107,3.6192036,59,1,pass,"def check_digit(number):
+    total = 0
+    for i, digit in enumerate(number):
+        total += int(digit) * (i % 2 + 1)
+    return (10 - total % 10) % 10
+"
+M4_check_digit,medium,general 1.5B,qwen2.5:1.5b,general,1.5,0.004590868940551067,14.370869159698486,2.1702624,73,1,pass,"def check_digit(number):
+    total = 0
+    for i, digit in enumerate(number):
+        if i % 2 == 0:
+            total += int(digit)
+        else:
+            total += int(digit) * 2
+    return (10 - total % 10) % 10
+"
+M4_check_digit,medium,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.0042900842001483645,13.624275922775269,2.9294369,50,0,AssertionError,"def check_digit(number):
+    total = sum(int(digit) * (i + 1) for i, digit in enumerate(number))
+    return (10 - total % 10) % 10
+"
+M5_parse_log,medium,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.003701154097856555,11.769166707992554,2.1138929,57,1,pass,"def parse_log(line):
+    parts = line.split('|')
+    return {
+        'date': parts[0],
+        'level': parts[1],
+        'module': parts[2],
+        'message': '|'.join(parts[3:])
+    }
+"
+M5_parse_log,medium,general 1.5B,qwen2.5:1.5b,general,1.5,0.0030879264813704413,9.218966007232666,1.6240151,33,1,pass,"def parse_log(line):
+    return dict(zip(('date', 'level', 'module', 'message'), line.split('|', 3)))
+"
+M5_parse_log,medium,general 0.5B,qwen2.5:0.5b,general,0.5,0.005228597056880174,16.309523820877075,1.0611854,246,0,"ValueError: not enough values to unpack (expected 4, got 3)","import re
+
+def parse_log(line):
+    """"""
+    Parses an internal log line written as ""date|level|module|message"" and returns a dictionary with the keys date, level, module and message.
+    The message itself may contain the | character, and everything after the third separator belongs to the message.
+    """"""
+    # Regular expression to match the log line structure
+    pattern = r'(\d{4}-\d{2}-\d{2})"
+M5_parse_log,medium,general 7B,qwen2.5:7b,general,7.0,0.014186132627943831,45.42337083816528,9.95488,61,1,pass,"def parse_log(line):
+    parts = line.split(""|"")
+    date, level, module, *message_parts = parts
+    message = ""|"".join(message_parts)
+    return {""date"": date, ""level"": level, ""module"": module, ""message"": message}
+"
+M5_parse_log,medium,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.007407647840652408,22.449010610580444,4.2359536,57,1,pass,"def parse_log(line):
+    parts = line.split('|')
+    return {
+        'date': parts[0],
+        'level': parts[1],
+        'module': parts[2],
+        'message': '|'.join(parts[3:])
+    }
+"
+M5_parse_log,medium,general 3B,qwen2.5:3b,general,3.0,0.007644813045378473,24.347073554992676,4.3944106,74,1,pass,"def parse_log(line):
+    parts = line.split('|')
+    date, level, module, message = parts[0], parts[1], parts[2], '|'.join(parts[3:])
+    return {
+        'date': date,
+        'level': level,
+        'module': module,
+        'message': message
+    }
+"
+M5_parse_log,medium,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.003314494866891066,10.129894971847534,1.4123629,109,0,AssertionError,"def parse_log(line):
+    # Split the line by the '|' character
+    parts = line.split('|')
+    
+    # Extract the date, level, module, and message
+    date = parts[0]
+    level = parts[1]
+    module = parts[2]
+    message = parts[3]
+    
+    # Return the dictionary with the parsed values
+    return {
+        'date': date,
+        'level': level,
+        'module': module,
+        'message': message"
+M6_free_slots,medium,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.00786917101932371,24.720719575881958,2.3516074,85,1,pass,"def free_slots(busy, start, end):
+    busy.sort()
+    free_slots = []
+    current = start
+    for from_time, to_time in busy:
+        if current < from_time:
+            free_slots.append([current, from_time])
+        current = max(current, to_time)
+    if current < end:
+        free_slots.append([current, end])
+    return free_slots
+"
+M6_free_slots,medium,general 7B,qwen2.5:7b,general,7.0,0.024136111821948122,77.50100207328796,10.2349513,157,0,AssertionError,"def free_slots(busy, start, end):
+    from sortedcontainers import SortedList
+    
+    events = SortedList()
+    for b in busy:
+        events.add((b[0], 'start'))
+        events.add((b[1], 'end'))
+    events.add((start, 'start'))
+    events.add((end, 'end'))
+    
+    result = []
+    busy_time = 0
+    prev_time = start
+    
+    for time, event in events:
+        if event == 'start':
+            bu"
+M6_free_slots,medium,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.004361217553829284,13.617954969406128,1.62954,150,0,AssertionError,"def free_slots(busy, start, end):
+    """"""
+    Returns a sorted list of [from, to] pairs representing the free periods inside the window [start, end].
+    
+    :param busy: List of [from, to] pairs, not necessarily sorted.
+    :param start: The start of the window.
+    :param end: The end of the window.
+    :return: A sorted list of [from, to] pairs representing the free periods.
+    """"""
+    free_p"
+M6_free_slots,medium,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.006554003636585238,20.808547019958496,2.3785616,137,0,IndexError: list index out of range,"def free_slots(busy, start, end):
+    busy.sort()
+    free = []
+    for i in range(len(busy)):
+        if i == 0:
+            free.append([start, busy[i][0]])
+        elif busy[i][0] > busy[i-1][1]:
+            free.append([busy[i-1][1], busy[i][0]])
+        elif busy[i][1] > busy[i-1][1]:
+            busy[i][1] = busy[i-1][1]
+    if busy[-1][1] < end:
+        free.append([busy[-1][1], end])
+    r"
+M6_free_slots,medium,general 3B,qwen2.5:3b,general,3.0,0.010647488454600479,33.941646337509155,3.5766328,125,0,AssertionError,"def free_slots(busy, start, end):
+    busy.sort()
+    result = []
+    i = 0
+    for slot in busy:
+        if slot[1] <= start:
+            continue
+        if slot[0] >= end:
+            break
+        if slot[0] > start:
+            result.append([start, slot[0]])
+        if slot[1] < end:
+            result.append([slot[1], end])
+        start = max(slot[1], end)
+    if start < end:
+        resul"
+M6_free_slots,medium,general 0.5B,qwen2.5:0.5b,general,0.5,0.0029846613457654592,9.308880805969238,1.3225623,80,0,AssertionError,"def free_slots(busy, start, end):
+    """"""
+    Returns a sorted list of free periods within the specified start and end times.
+    """"""
+    free_periods = []
+    for from_time, to_time in busy:
+        if from_time < start and to_time > end:
+            free_periods.append([from_time, to_time])
+    return sorted(free_periods)
+"
+M6_free_slots,medium,general 1.5B,qwen2.5:1.5b,general,1.5,0.005057644390094808,16.0061297416687,2.3859984,87,0,AssertionError,"def free_slots(busy, start, end):
+    busy.sort(key=lambda x: x[0])
+    free = []
+    i = 0
+    while i < len(busy) and busy[i][0] < end:
+        if busy[i][1] < start:
+            free.append([busy[i][0], busy[i][1]])
+        i += 1
+    return free
+"
+M7_abbreviate,medium,general 0.5B,qwen2.5:0.5b,general,0.5,0.002762827134928403,8.310557126998901,0.8161044,78,0,AssertionError,"def abbreviate(n):
+    if n >= 1000000:
+        return f""{n // 1000000:.1f}M""
+    elif n >= 1000:
+        return f""{n // 1000:.1f}k""
+    else:
+        return str(n)
+"
+M7_abbreviate,medium,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.008327182389534584,25.953959941864014,4.6790754,78,0,AssertionError,"def abbreviate(n):
+    if n >= 1000000:
+        return f""{n / 1000000:.1f}M""
+    elif n >= 1000:
+        return f""{n / 1000:.1f}k""
+    else:
+        return str(n)
+"
+M7_abbreviate,medium,general 1.5B,qwen2.5:1.5b,general,1.5,0.0044665130446823265,13.771422624588013,1.7154154,76,0,AssertionError,"def abbreviate(n):
+    if n >= 1000000:
+        return f""{n/1000000:.1f}M""
+    elif n >= 1000:
+        return f""{n/1000:.1f}k""
+    else:
+        return str(n)
+"
+M7_abbreviate,medium,general 7B,qwen2.5:7b,general,7.0,0.016439202415926158,52.24485635757446,9.7639496,78,0,AssertionError,"def abbreviate(n):
+    if n >= 1000000:
+        return f""{n / 1000000:.1f}M""
+    elif n >= 1000:
+        return f""{n / 1000:.1f}k""
+    else:
+        return str(n)
+"
+M7_abbreviate,medium,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.00487283102147583,15.210031032562256,2.6467291,79,0,AssertionError,"def abbreviate(n):
+    if n >= 1000000:
+        return f""{n / 1000000:.1f}M""
+    elif n >= 1000:
+        return f""{n / 1000:.1f}k""
+    else:
+        return str(int(n))
+"
+M7_abbreviate,medium,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.002777785422797301,8.4460608959198,1.1245865,78,0,AssertionError,"def abbreviate(n):
+    if n >= 1000000:
+        return f""{n / 1000000:.1f}M""
+    elif n >= 1000:
+        return f""{n / 1000:.1f}k""
+    else:
+        return str(n)
+"
+M7_abbreviate,medium,general 3B,qwen2.5:3b,general,3.0,0.008423148818963335,26.574040412902832,4.1415455,78,0,AssertionError,"def abbreviate(n):
+    if n < 1000:
+        return str(n)
+    elif n < 1000000:
+        return f""{n / 1000:.1f}k""
+    else:
+        return f""{n / 1000000:.1f}M""
+"
+M8_no_overlap,medium,general 0.5B,qwen2.5:0.5b,general,0.5,0.003519407167696043,10.971990823745728,1.0727317,138,0,AssertionError,"def no_overlap(slots):
+    """"""
+    Check if no two time slots overlap.
+
+    Args:
+    slots (list of [from, to]): A list of time slots in any order.
+
+    Returns:
+    bool: True if no two time slots overlap, False otherwise.
+    """"""
+    if not slots:
+        return True
+
+    # Sort the slots by their start time
+    slots.sort(key=lambda x: x[0])
+
+    # Iterate through the sorted slots
+    for i in"
+M8_no_overlap,medium,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.006737631904935736,21.198288202285767,4.1013249,59,1,pass,"def no_overlap(slots):
+    if not slots:
+        return True
+    
+    slots.sort()
+    for i in range(1, len(slots)):
+        if slots[i][0] < slots[i-1][1]:
+            return False
+    return True
+"
+M8_no_overlap,medium,general 7B,qwen2.5:7b,general,7.0,0.01351984464000938,42.888916015625,9.5571231,57,1,pass,"def no_overlap(slots):
+    slots.sort(key=lambda x: x[0])
+    for i in range(1, len(slots)):
+        if slots[i][0] < slots[i-1][1]:
+            return False
+    return True
+"
+M8_no_overlap,medium,general 1.5B,qwen2.5:1.5b,general,1.5,0.0044536357806493326,13.362594366073608,2.6742557,65,1,pass,"def no_overlap(slots):
+    if not slots:
+        return True
+    slots.sort()
+    prev_end = slots[0][1]
+    for start, end in slots[1:]:
+        if start < prev_end:
+            return False
+        prev_end = end
+    return True
+"
+M8_no_overlap,medium,general 3B,qwen2.5:3b,general,3.0,0.006929512024894094,21.92820143699646,3.5918104,66,1,pass,"def no_overlap(slots):
+    if not slots:
+        return True
+
+    slots.sort(key=lambda x: x[0])
+
+    for i in range(1, len(slots)):
+        if slots[i][0] < slots[i-1][1]:
+            return False
+
+    return True
+"
+M8_no_overlap,medium,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.00424400052849736,13.20650601387024,2.4051122,73,1,pass,"def no_overlap(slots):
+    slots.sort()  # Sort the slots by their start times
+    for i in range(1, len(slots)):
+        if slots[i][0] < slots[i-1][1]:  # Check if the current slot overlaps with the previous one
+            return False
+    return True
+"
+M8_no_overlap,medium,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.0036587222698573093,11.51746916770935,1.7164153,118,0,AssertionError,"def no_overlap(slots):
+    """"""
+    Check if no two time slots overlap.
+
+    Args:
+    slots (list of tuples): A list of tuples, where each tuple contains two integers representing
+                           the start and end of a time slot.
+
+    Returns:
+    bool: True if no two time slots overlap, False otherwise.
+    """"""
+    for i in range(len(slots)):
+        for j in range(i + 1, len(slots)):
+"
+H1_commission,hard,general 3B,qwen2.5:3b,general,3.0,0.008300788238463577,25.673789978027344,2.8422639,86,1,pass,"def commission(sales, target):
+    if sales < target:
+        return 0
+    elif sales <= 1.2 * target:
+        return round(0.05 * sales, 2)
+    else:
+        return round(0.05 * 1.2 * target + 0.08 * (sales - 1.2 * target), 2)
+"
+H1_commission,hard,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.005540442915207092,17.35128092765808,2.1267027,100,0,AssertionError,"def commission(sales, target):
+    if sales <= target:
+        return round(sales * 0.05, 2)
+    elif sales <= target * 1.2:
+        return round(sales * 0.05, 2)
+    else:
+        return round((target * 1.2) * 0.05 + (sales - target * 1.2) * 0.08, 2)
+"
+H1_commission,hard,general 7B,qwen2.5:7b,general,7.0,0.01813218724281534,57.61573672294617,11.0494511,90,0,AssertionError,"def commission(sales, target):
+    if sales <= target:
+        return round(0, 2)
+    elif sales <= 1.2 * target:
+        return round(0.05 * sales, 2)
+    else:
+        return round(0.05 * 1.2 * target + 0.08 * (sales - 1.2 * target), 2)
+"
+H1_commission,hard,general 1.5B,qwen2.5:1.5b,general,1.5,0.005047225510212604,15.732263088226318,2.9781075,76,0,AssertionError,"def commission(sales, target):
+    if sales < target:
+        return 0
+    elif sales <= target * 1.2:
+        return sales * 0.05
+    else:
+        return (target * 0.05) + ((sales - target * 1.2) * 0.08)
+"
+H1_commission,hard,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.008165961221980473,25.83566451072693,4.1112781,80,1,pass,"def commission(sales, target):
+    if sales < target:
+        return 0
+    elif sales <= 1.2 * target:
+        return sales * 0.05
+    else:
+        return (1.2 * target * 0.05) + ((sales - 1.2 * target) * 0.08)
+"
+H1_commission,hard,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.0027050644375224064,8.075904369354248,1.3727353,55,0,AssertionError,"def commission(sales, target):
+    if target <= 120:
+        return sales * 0.05
+    else:
+        return (target * 0.05) + (sales * 0.08)
+"
+H1_commission,hard,general 0.5B,qwen2.5:0.5b,general,0.5,0.0028762181909328436,8.738641262054443,1.3367772,68,0,AssertionError,"def commission(sales, target):
+    if target <= 120:
+        return round(sales * 0.05, 2)
+    else:
+        return round(sales * 0.05 + 0.08 * (target - 120), 2)
+"
+H2_collapse_ranges,hard,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.010835704293425183,34.42921423912048,2.8493529,137,1,pass,"def collapse_ranges(numbers):
+    numbers = sorted(set(numbers))
+    result = []
+    i = 0
+    while i < len(numbers):
+        start = numbers[i]
+        count = 1
+        while i + 1 < len(numbers) and numbers[i + 1] == numbers[i] + 1:
+            i += 1
+            count += 1
+        if count >= 3:
+            result.append(f""{start}-{numbers[i]}"")
+        else:
+            result.extend([str(nu"
+H2_collapse_ranges,hard,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.004387825945116253,13.745704174041748,1.190546,182,0,AssertionError,"def collapse_ranges(numbers):
+    # Sort the list of numbers
+    numbers.sort()
+    
+    # Initialize variables
+    result = []
+    current_range = []
+    
+    # Iterate through the sorted list
+    for num in numbers:
+        # If the current number is the same as the previous one, append it to the current range
+        if current_range and current_range[-1] == num:
+            current_range.appen"
+H2_collapse_ranges,hard,general 1.5B,qwen2.5:1.5b,general,1.5,0.003381423178612006,10.538825273513794,1.8606606,45,0,TypeError: object of type 'int' has no len(),"def collapse_ranges(numbers):
+    return ','.join(str(min(nums)) + '-' + str(max(nums)) if len(nums) > 2 else str(nums[0]) for nums in sorted(set(numbers)))
+"
+H2_collapse_ranges,hard,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.006493741568697018,20.55476188659668,2.403726,132,0,IndexError: list index out of range,"def collapse_ranges(numbers):
+    numbers.sort()
+    result = []
+    start = numbers[0]
+    for i in range(1, len(numbers)):
+        if numbers[i] == numbers[i-1] + 1:
+            continue
+        if i - start >= 3:
+            result.append(f""{start}-{numbers[i-1]}"")
+        else:
+            result.append(str(numbers[start]))
+        start = numbers[i]
+    if len(numbers) - start >= 3:
+        r"
+H2_collapse_ranges,hard,general 0.5B,qwen2.5:0.5b,general,0.5,0.006365930090171649,20.43992018699646,1.3495818,295,0,AssertionError,"from typing import List
+
+def collapse_ranges(numbers: List[int]) -> str:
+    """"""
+    Turns a list of integers into a compact string. Consecutive runs of three or more become ""first-last"",
+    shorter runs are written out as individual numbers, and the pieces are joined by commas.
+    Sort and de-duplicate first.
+    """"""
+    # Sort the numbers and de-duplicate them
+    numbers = sorted(set(numbers)"
+H2_collapse_ranges,hard,general 3B,qwen2.5:3b,general,3.0,0.009603436960007816,30.492676496505737,4.3850114,108,0,AssertionError,"def collapse_ranges(numbers):
+    numbers = sorted(set(numbers))
+    ranges = []
+    i = 0
+    while i < len(numbers):
+        start = numbers[i]
+        while i + 1 < len(numbers) and numbers[i + 1] == numbers[i] + 1:
+            i += 1
+        end = numbers[i]
+        ranges.append(str(numbers[i]) if start == end else f""{start}-{end}"")
+        i += 1
+    return ','.join(ranges)
+"
+H2_collapse_ranges,hard,general 7B,qwen2.5:7b,general,7.0,0.025519726297704992,81.55561923980713,10.7725872,161,0,AssertionError,"def collapse_ranges(numbers):
+    numbers = sorted(set(numbers))
+    result = []
+    start = end = numbers[0]
+    
+    for num in numbers[1:]:
+        if num == end + 1:
+            end = num
+        else:
+            if end == start + 2:
+                result.append(f""{start},{end}"")
+            elif end > start + 1:
+                result.append(f""{start}-{end}"")
+            else:
+             "
+H3_resolve_order,hard,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.009477145975234183,30.314242124557495,5.9243439,94,0,AssertionError,"def resolve_order(graph):
+    def topological_sort(node, visited, stack):
+        visited.add(node)
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                topological_sort(neighbor, visited, stack)
+        stack.append(node)
+
+    visited = set()
+    stack = []
+    for node in graph:
+        if node not in visited:
+            topological_sort(node, visited, st"
+H3_resolve_order,hard,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.003616310102269597,11.497028589248657,1.7238972,124,0,AssertionError,"def resolve_order(graph):
+    # Create a set to store the tasks that have already been processed
+    processed = set()
+    
+    # Initialize a list to store the order of tasks
+    order = []
+    
+    # Iterate over each task in the graph
+    for task in graph:
+        # If the task has not been processed yet, add it to the order list
+        if task not in processed:
+            # Add the task to "
+H3_resolve_order,hard,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.0068456632975745805,21.528164863586426,2.3802855,154,0,AssertionError,"def resolve_order(graph):
+    def dfs(node, visited, stack):
+        if node in visited:
+            return
+        visited.add(node)
+        for neighbor in graph[node]:
+            dfs(neighbor, visited, stack)
+        stack.append(node)
+
+    def topological_sort():
+        visited = set()
+        stack = []
+        for node in graph:
+            if node not in visited:
+                dfs(node,"
+H3_resolve_order,hard,general 7B,qwen2.5:7b,general,7.0,0.019894692543182303,63.187713861465454,10.9752827,108,0,AssertionError,"def resolve_order(graph):
+    def dfs(task, visited, order):
+        if task in order:
+            return
+        if task in visited:
+            return False
+        visited.add(task)
+        for dep in graph[task]:
+            if not dfs(dep, visited, order):
+                return False
+        order.append(task)
+        return True
+
+    order = []
+    visited = set()
+    for task in graph:
+   "
+H3_resolve_order,hard,general 3B,qwen2.5:3b,general,3.0,0.008557485354143836,27.160028219223022,5.1595839,80,0,AssertionError,"def resolve_order(graph):
+    def dfs(task):
+        if task not in visited:
+            visited.add(task)
+            for dependency in sorted(graph.get(task, [])):
+                dfs(dependency)
+            result.append(task)
+
+    visited = set()
+    result = []
+    for task in sorted(graph.keys()):
+        if task not in visited:
+            dfs(task)
+    return result
+"
+H3_resolve_order,hard,general 1.5B,qwen2.5:1.5b,general,1.5,0.005533556733953483,17.239137649536133,2.8487279,95,0,AssertionError,"def resolve_order(graph):
+    def dfs(task):
+        if task in ready:
+            return
+        if task in cycle:
+            return
+        cycle.add(task)
+        for dep in graph[task]:
+            dfs(dep)
+        ready.add(task)
+        order.append(task)
+
+    ready = set()
+    cycle = set()
+    order = []
+    for task in graph:
+        if task not in ready:
+            dfs(task)
+    return"
+H3_resolve_order,hard,general 0.5B,qwen2.5:0.5b,general,0.5,0.0038186665109644414,12.117885828018188,1.4025589,121,0,AssertionError,"def resolve_order(graph):
+    dependencies = {task: set(task) for task in graph}
+    visited = set()
+    stack = []
+    for task in graph:
+        if task not in dependencies:
+            stack.append(task)
+            visited.add(task)
+            while stack:
+                current_task = stack.pop()
+                for dependency in dependencies[current_task]:
+                    if dependency"
+H4_balance_load,hard,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.003924323048685169,12.25789475440979,2.9283891,49,1,pass,"def balance_load(tasks, agents):
+    agents = [0] * agents
+    for task in tasks:
+        min_index = agents.index(min(agents))
+        agents[min_index] += task
+    return agents
+"
+H4_balance_load,hard,general 1.5B,qwen2.5:1.5b,general,1.5,0.004177885716266428,13.043126106262207,2.1237916,58,1,pass,"def balance_load(tasks, agents):
+    totals = [0] * agents
+    for task in tasks:
+        smallest = min(totals)
+        smallest_index = totals.index(smallest)
+        totals[smallest_index] += task
+    return totals
+"
+H4_balance_load,hard,general 0.5B,qwen2.5:0.5b,general,0.5,0.005430131575839615,17.140313863754272,1.0744157,249,0,NameError: name 'task' is not defined. Did you mean: 'tasks'?,"import heapq
+
+def balance_load(tasks, agents):
+    """"""
+    Shares tasks between agents in a way that each agent gets the smallest total task duration.
+    If two agents have the same total task duration, the agent with the lower index wins.
+    
+    :param tasks: A list of durations for tasks.
+    :param agents: The number of agents.
+    :return: A list of totals, one per agent.
+    """"""
+    # Conv"
+H4_balance_load,hard,general 7B,qwen2.5:7b,general,7.0,0.013477565876356097,42.85067009925842,9.688563,53,1,pass,"def balance_load(tasks, agents):
+    agent_totals = [0] * agents
+    for task in tasks:
+        min_index = agent_totals.index(min(agent_totals))
+        agent_totals[min_index] += task
+    return agent_totals
+"
+H4_balance_load,hard,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.006794412581044123,21.28436851501465,4.4053821,50,1,pass,"def balance_load(tasks, agents):
+    totals = [0] * agents
+    for task in tasks:
+        min_index = totals.index(min(totals))
+        totals[min_index] += task
+    return totals
+"
+H4_balance_load,hard,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.0034576298830852467,10.93039608001709,1.9561409,89,0,TypeError: 'list' object cannot be interpreted as an integer,"def balance_load(tasks, agents):
+    # Initialize the list of agents with the same number of tasks
+    agents = [tasks] * agents
+    
+    # Sort the agents based on their total duration
+    agents.sort(key=lambda x: sum(x))
+    
+    # Distribute tasks to agents
+    for i in range(agents):
+        agents[i] = [tasks.pop(0)]
+    
+    return agents
+"
+H4_balance_load,hard,general 3B,qwen2.5:3b,general,3.0,0.007657168088294866,24.33232569694519,4.1155346,70,0,AssertionError,"def balance_load(tasks, agents):
+    if not tasks or not agents:
+        return []
+
+    task_totals = [0] * agents
+    tasks.sort(reverse=True)
+
+    for task in tasks:
+        min_index = task_totals.index(min(task_totals))
+        task_totals[min_index] += task
+
+    return task_totals
+"
+H5_evaluate,hard,general 1.5B,qwen2.5:1.5b,general,1.5,0.014979693886514985,47.73066520690918,2.6098915,400,0,SyntaxError: invalid syntax,"def evaluate(expression):
+    def parse_expression(expression):
+        i = 0
+        while i < len(expression):
+            if expression[i] == ' ':
+                i += 1
+                continue
+            if expression[i] in '+-':
+                return expression[:i], i
+            i += 1
+        return expression, i
+
+    def evaluate_expression(expression):
+        if expression[0] == '(':
+"
+H5_evaluate,hard,general 7B,qwen2.5:7b,general,7.0,0.03845535184743448,123.34353828430176,10.4842204,289,1,pass,"def evaluate(expression):
+    def apply_op(op, a, b):
+        if op == '+': return a + b
+        elif op == '-': return a - b
+        elif op == '*': return a * b
+        elif op == '/': return a // b
+
+    def evaluate_postfix(tokens):
+        stack = []
+        for token in tokens:
+            if token.isdigit():
+                stack.append(int(token))
+            else:
+                b = stack"
+H5_evaluate,hard,general 3B,qwen2.5:3b,general,3.0,0.021233991875913044,67.91479349136353,4.3889858,312,0,AssertionError,"def evaluate(expression):
+    def calculate(operands, operators):
+        operand = operands.pop()
+        operand2 = operands.pop()
+        operator = operators.pop()
+        if operator == '+':
+            operands.append(operand2 + operand)
+        elif operator == '-':
+            operands.append(operand2 - operand)
+        elif operator == '*':
+            operands.append(operand2 * operand)
+"
+H5_evaluate,hard,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.02180247202398867,69.74674081802368,5.7135294,326,0,did not finish within 10 s,"def evaluate(expression):
+    def apply_operator(operators, values):
+        operator = operators.pop()
+        right = values.pop()
+        left = values.pop()
+        if operator == '+':
+            values.append(left + right)
+        elif operator == '-':
+            values.append(left - right)
+        elif operator == '*':
+            values.append(left * right)
+        elif operator == '/':
+ "
+H5_evaluate,hard,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.014657554488930968,46.51324009895325,3.5613993,400,0,IndentationError: expected an indented block after 'elif' statement on line 59,"def evaluate(expression):
+    def apply_operator(operators, operands):
+        while operators and operators[-1] != '(':
+            op = operators.pop()
+            b = operands.pop()
+            a = operands.pop()
+            if op == '+':
+                operands.append(a + b)
+            elif op == '-':
+                operands.append(a - b)
+            elif op == '*':
+                operands"
+H5_evaluate,hard,general 0.5B,qwen2.5:0.5b,general,0.5,0.004426303832461663,13.477506875991821,1.6601131,152,0,IndexError: pop from empty list,"def evaluate(expression):
+    import operator
+    import ast
+    expression = expression.replace("" "", """")
+    tokens = expression.split()
+    operations = {
+        ""+"": operator.add,
+        ""-"": operator.sub,
+        ""*"": operator.mul,
+        ""/"": operator.truediv
+    }
+    stack = []
+    for token in tokens:
+        if token.isdigit():
+            stack.append(float(token))
+        else:
+     "
+H5_evaluate,hard,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.004559069174116822,14.31796932220459,1.4823974,180,0,AssertionError,"def evaluate(expression):
+    # Split the expression into tokens
+    tokens = expression.split()
+    
+    # Initialize the result with the first token
+    result = int(tokens[0])
+    
+    # Iterate over the tokens starting from the second token
+    for i in range(1, len(tokens)):
+        # Check if the current token is an operator
+        if tokens[i] in ['+', '-', '*', '/']:
+            # Apply t"
+H6_allocate,hard,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.014007973423578571,44.61199069023132,3.8727247,181,0,AssertionError,"def allocate(demands, capacity):
+    if sum(demands) == 0:
+        return [0] * len(demands)
+    
+    total_demand = sum(demands)
+    shares = [capacity * demand / total_demand for demand in demands]
+    
+    # Calculate the fractional part of each share
+    fractional_parts = [share - int(share) for share in shares]
+    
+    # Sort claimants by their fractional parts in descending order
+    sorte"
+H6_allocate,hard,general 0.5B,qwen2.5:0.5b,general,0.5,0.0044385448826637355,13.52177619934082,1.071195,168,0,AssertionError,"from typing import List
+
+def allocate(demands: List[int], capacity: int) -> List[int]:
+    """"""
+    Shares the capacity between claimants in proportion to their demands.
+    Each claimant gets the whole part of their exact share, then hands the remaining units
+    one by one to the claimants with the largest fractional parts; on a tie, the earlier
+    claimant wins. If the demands sum to zero, retu"
+H6_allocate,hard,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.005497598733621876,17.33511972427368,1.9096221,101,1,pass,"def allocate(demands, capacity):
+    if sum(demands) == 0:
+        return [0] * len(demands)
+    
+    shares = [int(capacity * demand / sum(demands)) for demand in demands]
+    remaining = capacity - sum(shares)
+    
+    for i in range(len(demands)):
+        if remaining > 0:
+            shares[i] += 1
+            remaining -= 1
+    
+    return shares
+"
+H6_allocate,hard,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.0043830823527369585,13.562093496322632,1.1204983,151,0,AssertionError,"def allocate(demands, capacity):
+    # Calculate the total demand
+    total_demand = sum(demands)
+    
+    # Check if the total demand is zero
+    if total_demand == 0:
+        return [0] * len(demands)
+    
+    # Calculate the number of shares needed
+    shares_needed = capacity // total_demand
+    
+    # Distribute the shares
+    shares = []
+    for demand in demands:
+        # Calculate the sha"
+H6_allocate,hard,general 3B,qwen2.5:3b,general,3.0,0.011695480502751113,37.158055543899536,4.3688869,131,0,AssertionError,"def allocate(demands, capacity):
+    if sum(demands) == 0:
+        return [0] * len(demands)
+    
+    shares = [int(capacity * d / sum(demands)) for d in demands]
+    fractional_parts = [capacity * d / sum(demands) - s for d, s in zip(demands, shares)]
+    
+    for i in range(len(fractional_parts) - 1, -1, -1):
+        shares[i] += int(fractional_parts[i] > fractional_parts[i - 1])
+    
+    return"
+H6_allocate,hard,general 7B,qwen2.5:7b,general,7.0,0.02598455071835047,83.30164551734924,11.0092227,153,1,pass,"def allocate(demands, capacity):
+    if sum(demands) == 0:
+        return [0] * len(demands)
+    
+    shares = []
+    total_demand = sum(demands)
+    exact_shares = [demand / total_demand for demand in demands]
+    
+    for i, share in enumerate(exact_shares):
+        shares.append(int(share * capacity))
+    
+    remainder = capacity - sum(shares)
+    sorted_indices = sorted(range(len(demands)), k"
+H6_allocate,hard,general 1.5B,qwen2.5:1.5b,general,1.5,0.0068383856215976325,21.790674209594727,3.6071573,123,0,AssertionError,"def allocate(demands, capacity):
+    if sum(demands) == 0:
+        return [0] * len(demands)
+    
+    shares = [0] * len(demands)
+    fractional_part = capacity
+    
+    for i in range(len(demands)):
+        shares[i] = int(fractional_part * demands[i])
+        fractional_part -= shares[i]
+    
+    for i in range(len(demands)):
+        if fractional_part > 0:
+            shares[i] += 1
+           "
+H7_shortest_path,hard,general 0.5B,qwen2.5:0.5b,general,0.5,0.006129565433631323,19.605485677719116,1.3176,294,0,AssertionError,"def shortest_path(grid):
+    """"""
+    Calculate the number of steps of the shortest route from the top-left cell to the bottom-right cell of a rectangular grid.
+    grid is a list of equal-length strings; ""#"" is a wall and any other character is free. Moves are up, down, left and right only.
+    The number of steps is the number of moves, so a one-cell grid gives 0.
+    Return -1 when no route exis"
+H7_shortest_path,hard,general 1.5B,qwen2.5:1.5b,general,1.5,0.00799534052399118,25.195321798324585,1.8197862,199,0,AssertionError,"def shortest_path(grid):
+    rows, cols = len(grid), len(grid[0])
+    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+    visited = [[False] * cols for _ in range(rows)]
+    queue = [(0, 0, 0)]  # (row, col, steps)
+
+    while queue:
+        row, col, steps = queue.pop(0)
+        if row == rows - 1 and col == cols - 1:
+            return steps
+        for dr, dc in directions:
+            r, c = ro"
+H7_shortest_path,hard,general 7B,qwen2.5:7b,general,7.0,0.03225817484654201,103.36666369438171,10.4917433,224,1,pass,"from collections import deque
+
+def shortest_path(grid):
+    if not grid or grid[0][0] == '#' or grid[-1][-1] == '#':
+        return -1
+    
+    rows, cols = len(grid), len(grid[0])
+    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+    queue = deque([(0, 0, 0)])
+    visited = set((0, 0))
+    
+    while queue:
+        x, y, steps = queue.popleft()
+        if x == rows - 1 and y == cols - 1:
+      "
+H7_shortest_path,hard,coder 3B,qwen2.5-coder:3b,specialised,3.0,0.017595031541465283,56.422423362731934,4.9098225,236,1,pass,"def shortest_path(grid):
+    if not grid or grid[0][0] == '#' or grid[-1][-1] == '#':
+        return -1
+    
+    rows, cols = len(grid), len(grid[0])
+    directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    queue = [(0, 0, 0)]  # (row, col, steps)
+    visited = set()
+    
+    while queue:
+        row, col, steps = queue.pop(0)
+        
+        if row == rows - 1 and col == cols - 1:
+            ret"
+H7_shortest_path,hard,general 3B,qwen2.5:3b,general,3.0,0.014571388953652552,46.68592643737793,4.657135,199,0,AssertionError,"def shortest_path(grid):
+    rows, cols = len(grid), len(grid[0])
+    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+    queue = [(0, 0, 1)]  # steps, row, col
+    visited = set()
+    
+    while queue:
+        steps, row, col = queue.pop(0)
+        if (row, col) in visited:
+            continue
+        visited.add((row, col))
+        
+        if row == rows - 1 and col == cols - 1:
+            re"
+H7_shortest_path,hard,coder 0.5B,qwen2.5-coder:0.5b,specialised,0.5,0.007555818085483448,23.847275257110596,1.4047538,353,0,NameError: name 'heapq' is not defined. Did you mean: 'help'?,"def shortest_path(grid):
+    """"""
+    Returns the number of steps of the shortest route from the top-left cell to the bottom-right cell of a rectangular grid.
+    grid is a list of equal-length strings; ""#"" is a wall and any other character is free. Moves are up, down,
+    left and right only. The number of steps is the number of moves, so a one-cell grid gives 0.
+    Return -1 when no route exists"
+H7_shortest_path,hard,coder 1.5B,qwen2.5-coder:1.5b,specialised,1.5,0.009063768111871526,28.55188298225403,3.1599649,211,0,AssertionError,"def shortest_path(grid):
+    rows, cols = len(grid), len(grid[0])
+    if grid[0][0] == ""#"" or grid[rows-1][cols-1] == ""#"":
+        return -1
+    
+    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+    queue = [(0, 0, 0)]
+    visited = set()
+    
+    while queue:
+        x, y, steps = queue.pop(0)
+        
+        if (x, y) == (rows-1, cols-1):
+            return steps
+        
+        for dx, dy "
