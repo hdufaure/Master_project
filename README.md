@@ -63,6 +63,37 @@ sources.md   each citation mapped to the exact place it comes from
 | [`04_coder_vs_general.ipynb`](notebooks/04_coder_vs_general.ipynb) | a code-trained model against its general twin |
 | [`05_scaling_cloud.ipynb`](notebooks/05_scaling_cloud.ipynb) | no new measurement: published multipliers applied to the CSVs above |
 
+## Checking the numbers
+
+Every headline figure in the write-up is recomputed from the raw CSVs by one
+script:
+
+```bash
+pip install pandas numpy && python verify.py
+```
+
+It prints each claim beside the value it recomputes and exits non-zero if any of
+them disagree. Nothing is hard-coded except the claimed figure itself.
+
+```
+always-3B against always-7B, energy saved (%)       51.6 %     51.59 %  ok
+cascade against always-7B, energy saved (%)         69.7 %     69.69 %  ok
+verifier false accepts                             3 of 10     3 of 10  ok
+...
+19 of 19 checks reproduce the published figure.
+```
+
+## Running it without installing anything
+
+Two notebooks need nothing but pandas and matplotlib, so they open straight in
+Colab:
+
+- [`05_scaling_cloud.ipynb`](https://colab.research.google.com/github/hdufaure/ai-inference-energy/blob/main/notebooks/05_scaling_cloud.ipynb) — the cloud extrapolation
+- the figure script runs the same way: `!git clone` the repo, then `cd ai-inference-energy/figures && python gen.py`
+
+The four measurement notebooks cannot run in Colab — they need a local Ollama
+server and a power meter on the host.
+
 ## Reproducing
 
 Figures, from the data already here:
