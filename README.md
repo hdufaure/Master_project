@@ -88,7 +88,7 @@ verifier false accepts                             3 of 10     3 of 10  ok
 Two notebooks need nothing but pandas and matplotlib, so they open straight in
 Colab:
 
-- [`05_scaling_cloud.ipynb`](https://colab.research.google.com/github/hdufaure/ai-inference-energy/blob/main/notebooks/05_scaling_cloud.ipynb) — the cloud extrapolation
+- [`05_scaling_cloud.ipynb`](https://colab.research.google.com/github/hdufaure/master_project/blob/main/notebooks/05_scaling_cloud.ipynb) — the cloud extrapolation
 - the figure script runs the same way: `!git clone` the repo, then `cd ai-inference-energy/figures && python gen.py`
 
 The four measurement notebooks cannot run in Colab — they need a local Ollama

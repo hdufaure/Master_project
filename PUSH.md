@@ -2,19 +2,19 @@
 
 The repository is already initialised with two commits. Only the remote is missing.
 
-1. Create an **empty** repository on github.com named `ai-inference-energy`
-   (no README, no .gitignore, no licence — the files are already here).
-
-2. From inside this folder:
+The remote is already configured and the branch is already `main`. From inside
+this folder, one command:
 
 ```bash
-git remote add origin https://github.com/hdufaure/ai-inference-energy.git
-git branch -M main
 git push -u origin main
 ```
 
-If you use SSH instead:
-`git remote add origin git@github.com:hdufaure/ai-inference-energy.git`
+If you would rather use SSH:
+
+```bash
+git remote set-url origin git@github.com:hdufaure/master_project.git
+git push -u origin main
+```
 
 ## Before making it public
 
